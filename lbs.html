@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LBS - Joyin Frontend</title>
+
+	<!-- Bootstrap Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+	<!-- Custom CSS -->
+  <script type="module" crossorigin src="./assets/js/lbs.Dpf5rLFC.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/js/public.BRxk827P.js">
+  <link rel="modulepreload" crossorigin href="./assets/js/splide.esm.BMadpM89.js">
+  <link rel="stylesheet" crossorigin href="./assets/css/lbs.D6bQy4EB.css">
+</head>
+
+<body>
+	<!-- Header -->
+	<header class="header">
+		<nav class="navbar navbar-expand-lg navbar-light bg-white">
+			<div class="container-fluid">
+				<div class="col-11 col-xl-9 m-auto">
+					<div class="row justify-content-between">
+						<div class="col-12 col-lg-2">
+							<div class="row justify-content-between align-items-center">
+								<!-- Logo -->
+								<div class="col-3 col-lg-12">
+									<a class="navbar-brand fw-bold text-primary" href="index.html">
+										<img src="images/joyin-logo.svg" alt="JOYin Logo" class="img-fluid">
+									</a>
+								</div>
+								<!-- Mobile Toggle Button -->
+								<div class="col-9 d-lg-none text-end">
+									<div class="d-flex justify-content-end align-items-center">
+										<div class="searchBox" id="searchBoxMobile">
+											<input class="searchInput" type="text" name="" placeholder="Search"
+												id="searchInputMobile">
+											<button class="searchButton" id="searchButtonMobile">
+												<img src="images/joyin-search-icon.svg" alt="JOYin Search Icon"
+													class="img-fluid img-icon">
+											</button>
+										</div>
+
+										<div class="personBox">
+											<a href="#" class="d-inline-flex">
+												<img src="images/joyin-person-icon.svg" alt="JOYin Person Icon"
+													class="img-fluid img-icon">
+											</a>
+										</div>
+
+										<div class="toggleBox">
+											<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+												data-bs-target="#navbarNav" aria-controls="navbarNav"
+												aria-expanded="false" aria-label="Toggle navigation">
+												<img src="images/joyin-menu-icon.svg" alt="JOYin Menu Icon"
+													class="img-fluid img-icon">
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-lg-10">
+							<!-- Navigation Menu -->
+							<div class="collapse navbar-collapse" id="navbarNav">
+								<ul class="navbar-nav ms-auto align-items-center">
+									<li class="nav-item">
+										<a class="nav-link" href="index.html">首頁</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="about.html">關於我們</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="coupon.html">優惠券平台</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link active" href="lbs.html">周邊好康</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="game.html">任務遊戲</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="case.html">成功案例</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="contact.html">聯絡我們</a>
+									</li>
+									<li class="nav-item mx-3 justify-content-end align-items-center d-none d-lg-flex">
+										<div class="searchBox" id="searchBox">
+											<input class="searchInput" type="text" name="" placeholder="Search"
+												id="searchInput">
+											<button class="searchButton" id="searchButton">
+												<img src="images/joyin-search-icon.svg" alt="JOYin Search Icon"
+													class="img-fluid img-icon">
+											</button>
+										</div>
+									</li>
+									<li class="nav-item d-none d-lg-flex">
+										<a href="#" class="d-inline-flex">
+											<img src="images/joyin-person-icon.svg" alt="JOYin Person Icon"
+												class="img-fluid img-icon">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<!-- Hero Banner Carousel -->
+		<section class="hero-section">
+			<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+				<!-- Carousel Inner -->
+				<div class="carousel-inner">
+					<!-- Slide 1 -->
+					<div class="carousel-item active">
+						<div class="carousel-bg position-relative">
+							<img src="http://picsum.photos/id/122/2560/1920" alt="Hero Image"
+								class="w-100 h-100 object-fit-cover">
+							<div class="carousel-overlay"></div>
+							<div
+								class="position-absolute top-0 start-0 w-100 h-100 p-0 d-none d-lg-flex align-items-center justify-content-center">
+								<div class="container">
+									<div class="col-11 m-auto">
+										<div class="row w-100 h-100">
+											<div class="col-12 col-lg-6 p-0">
+												<div class="hero-content text-white">
+													<h1 class="display-4 fw-bold mb-3 carousel-item-title">
+														隨時隨地掌握周邊資訊 <br>
+														快速瀏覽附近店家好康！
+													</h1>
+													<p class="carousel-item-lead mb-0">透過即時定位技術，將使用者周邊商家的熱門優惠
+														主動推送到眼前。</p>
+												</div>
+											</div>
+											<div class="col-lg-6 p-0"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+
+		<!-- Location Services Info Section -->
+		<section class="location-services-info-section mt-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-11 m-auto">
+						<header class="section-header">
+							<h2 class="text-center">LBS 定位服務</h2>
+							<p class="text-center">Location Services</p>
+						</header>
+						<div class="section-container">
+							<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+								<li class="nav-item" role="presentation">
+									<button class="nav-link active" id="pills-shopping-tab" data-bs-toggle="pill"
+										data-bs-target="#pills-shopping" type="button" role="tab"
+										aria-controls="pills-shopping" aria-selected="true">購物</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="pills-restaurant-tab" data-bs-toggle="pill"
+										data-bs-target="#pills-restaurant" type="button" role="tab"
+										aria-controls="pills-restaurant" aria-selected="false">餐飲</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="pills-life-tab" data-bs-toggle="pill"
+										data-bs-target="#pills-life" type="button" role="tab" aria-controls="pills-life"
+										aria-selected="false">生活</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="pills-pet-tab" data-bs-toggle="pill"
+										data-bs-target="#pills-pet" type="button" role="tab" aria-controls="pills-pet"
+										aria-selected="false">寵物</button>
+								</li>
+							</ul>
+							<div class="tab-content" id="pills-tabContent">
+								<div class="tab-pane fade show active" id="pills-shopping" role="tabpanel"
+									aria-labelledby="pills-shopping-tab">
+
+								</div>
+								<div class="tab-pane fade" id="pills-restaurant" role="tabpanel"
+									aria-labelledby="pills-restaurant-tab">...</div>
+								<div class="tab-pane fade" id="pills-life" role="tabpanel"
+									aria-labelledby="pills-life-tab">...</div>
+								<div class="tab-pane fade" id="pills-pet" role="tabpanel"
+									aria-labelledby="pills-pet-tab">...</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- 個性化推薦輪播區塊 -->
+		<section class="recommendation-section py-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-11 col-md-8 m-auto">
+						<header class="section-header text-center mb-4">
+							<h2>個性化推薦</h2>
+							<p>根據使用者消費偏好與歷史紀錄自動推播最相關的優惠資訊，提高使用率與轉換率。</p>
+						</header>
+
+						<div class="section-container">
+							<section class="splide splide-recommendation">
+								<div class="splide__track">
+									<ul class="splide__list">
+										<li class="splide__slide">
+											<div class="recommendation-item">
+												<div class="recommendation-item__card">
+													<div class="card bg-white ">
+														<div class="card-image">
+															<picture class="d-inline-block">
+																<img src="./images/lbs/lbs-pic-01.webp"
+																	class="card-img-top img-fluid" alt="...">
+															</picture>
+														</div>
+														<div class="card-content">
+															<h3>樂園優惠清單</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</li>
+
+										<li class="splide__slide">
+											<div class="recommendation-item">
+												<div class="recommendation-item__card">
+													<div class="card bg-white ">
+														<div class="card-image">
+															<picture class="d-inline-block">
+																<img src="./images/lbs/lbs-pic-02.webp"
+																	class="card-img-top img-fluid" alt="...">
+															</picture>
+														</div>
+														<div class="card-content">
+															<h3>餐飲優惠清單</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+
+										<li class="splide__slide">
+											<div class="recommendation-item">
+												<div class="recommendation-item__card">
+													<div class="card bg-white ">
+														<div class="card-image">
+															<picture class="d-inline-block">
+																<img src="./images/lbs/lbs-pic-03.webp"
+																	class="card-img-top img-fluid" alt="...">
+															</picture>
+														</div>
+														<div class="card-content">
+															<h3>旅遊優惠清單</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+
+	<!-- Footer -->
+	<footer class="footer mt-5 py-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-11 m-auto">
+					<div class="row">
+						<div class="col-12 col-lg-4">
+							<div class="d-flex flex-column justify-content-between h-100">
+								<div>
+									<img src="images/joyin-logo.svg" alt="JOYin Logo" class="img-fluid">
+									<p class="mt-3">我們一起開創數位的未來<br>歡迎諮詢</p>
+								</div>
+
+								<span class="copyright d-none d-lg-block">
+									Joyin © 2025. All rights reserved.
+								</span>
+							</div>
+						</div>
+						<div class="col-12 col-lg-8 mt-3 mt-lg-0">
+							<div class="row">
+								<div class="col-6 col-lg-3">
+									<ul class="list-unstyled">
+										<li class="">
+											<a href="index.html">
+												首頁
+											</a>
+										</li>
+										<li>
+											<a href="about.html">
+												關於我們
+											</a>
+										</li>
+										<li>
+											<a href="coupon.html">
+												優惠券平台
+											</a>
+										</li>
+										<li>
+											<a href="lbs.html">
+												周邊好康
+											</a>
+										</li>
+										<li>
+											<a href="game.html">
+												任務遊戲
+											</a>
+										</li>
+										<li>
+											<a href="case.html">
+												成功案例
+											</a>
+										</li>
+										<li>
+											<a href="contact.html">
+												聯絡我們
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-6 col-lg-3">
+									<ul class="list-unstyled">
+										<li>
+											<a href="#">
+												隱私條款
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												服務條款
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												常見問題
+											</a>
+										</li>
+									</ul>
+								</div>
+
+								<div class="col-12 col-lg-6 mt-3 mt-lg-0">
+									<div class="contact-info d-flex flex-column justify-content-between h-100">
+										<h5 class="mb-3">聯絡我們</h5>
+										<p>
+											TEL:+886-937-773-381<br>
+											Mail:eva.chen@systex.com<br>
+											好康多據點：235台灣中和區連城路168-2號6樓<br>
+											週一至週五 9:00 AM – 6:00 PM<br>
+											週六、週日及國定假日休息<br>
+										</p>
+										<ul class="d-flex gap-3 list-unstyled">
+											<li class="social-link">
+												<a href="#">
+													<img src="images/joyin-fb-icon.svg" alt="Facebook Icon"
+														class="img-fluid">
+												</a>
+											</li>
+											<li class="social-link">
+												<a href="#">
+													<img src="images/joyin-ig-icon.svg" alt="Instagram Icon"
+														class="img-fluid">
+												</a>
+											</li>
+
+											<li class="social-link">
+												<a href="#">
+													<img src="images/joyin-yt-icon.svg" alt="Youtube Icon"
+														class="img-fluid">
+												</a>
+											</li>
+										</ul>
+
+										<span class="copyright d-block d-lg-none">
+											Joyin © 2025. All rights reserved.
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</footer>
+
+	<!-- Go Top Button -->
+	<button id="goTopBtn" class="go-top-btn" aria-label="回到頂部">
+		<img src="./images/joyin-gotop-icon.svg" alt="回到頂部">
+	</button>
+
+	<!-- Bootstrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Custom JS -->
+
+</body>
+
+</html>

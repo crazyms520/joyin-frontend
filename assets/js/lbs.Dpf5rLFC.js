@@ -1,0 +1,1 @@
+import"./public.BRxk827P.js";import{t as e}from"./splide.esm.BMadpM89.js";document.addEventListener(`DOMContentLoaded`,function(){new e(`.splide-recommendation`,{perPage:3,type:`loop`,focus:`center`,pagination:!1,breakpoints:{768:{perPage:1},576:{perPage:1,gap:`0.5rem`}}}).mount()});
