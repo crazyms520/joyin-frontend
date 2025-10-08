@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact - Joyin Frontend</title>
+
+	<!-- Bootstrap Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="/src/styles/page/contact.scss">
+</head>
+
+<body>
+	<!-- Header -->
+	<header class="header">
+		<nav class="navbar navbar-expand-lg navbar-light bg-white">
+			<div class="container-fluid">
+				<div class="col-11 col-xl-9 m-auto">
+					<div class="row justify-content-between">
+						<div class="col-12 col-lg-2">
+							<div class="row justify-content-between align-items-center">
+								<!-- Logo -->
+								<div class="col-3 col-lg-12">
+									<a class="navbar-brand fw-bold text-primary" href="index.html">
+										<img src="images/joyin-logo.svg" alt="JOYin Logo" class="img-fluid">
+									</a>
+								</div>
+								<!-- Mobile Toggle Button -->
+								<div class="col-9 d-lg-none text-end">
+									<div class="d-flex justify-content-end align-items-center">
+										<div class="searchBox" id="searchBoxMobile">
+											<input class="searchInput" type="text" name="" placeholder="Search"
+												id="searchInputMobile">
+										<button class="searchButton" id="searchButtonMobile">
+											<img src="images/joyin-search-icon.svg" alt="JOYin Search Icon"
+												class="img-fluid img-icon">
+										</button>
+									</div>
+
+									<div class="personBox">
+										<a href="#" class="d-inline-flex">
+											<img src="images/joyin-person-icon.svg" alt="JOYin Person Icon"
+												class="img-fluid img-icon">
+										</a>
+									</div>
+
+									<div class="toggleBox">
+										<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+											data-bs-target="#navbarNav" aria-controls="navbarNav"
+											aria-expanded="false" aria-label="Toggle navigation">
+											<img src="images/joyin-menu-icon.svg" alt="JOYin Menu Icon"
+												class="img-fluid img-icon">
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-lg-10">
+							<!-- Navigation Menu -->
+							<div class="collapse navbar-collapse" id="navbarNav">
+								<ul class="navbar-nav ms-auto align-items-center">
+									<li class="nav-item">
+										<a class="nav-link" href="index.html">首頁</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="about.html">關於我們</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="coupon.html">優惠券平台</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="lbs.html">周邊好康</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="game.html">任務遊戲</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="case.html">成功案例</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link active" href="contact.html">聯絡我們</a>
+									</li>
+									<li class="nav-item mx-3 justify-content-end align-items-center d-none d-lg-flex">
+										<div class="searchBox" id="searchBox">
+										<input class="searchInput" type="text" name="" placeholder="Search"
+											id="searchInput">
+										<button class="searchButton" id="searchButton">
+											<img src="images/joyin-search-icon.svg" alt="JOYin Search Icon"
+												class="img-fluid img-icon">
+										</button>
+									</div>
+								</li>
+								<li class="nav-item d-none d-lg-flex">
+									<a href="#" class="d-inline-flex">
+										<img src="images/joyin-person-icon.svg" alt="JOYin Person Icon"
+											class="img-fluid img-icon">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<!-- Hero Banner Carousel -->
+		<section class="hero-section">
+			<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+				<!-- Carousel Inner -->
+				<div class="carousel-inner">
+					<!-- Slide 1 -->
+					<div class="carousel-item active">
+						<div class="carousel-bg position-relative">
+							<img src="/images/contact/contact-banner.webp" alt="Contact Hero Image"
+								class="w-100 h-100 object-fit-cover">
+							<div class="carousel-overlay"></div>
+							<div
+								class="position-absolute top-0 start-0 w-100 h-100 p-0 d-flex align-items-center justify-content-center">
+								<div class="container">
+									<div class="col-11 m-auto">
+										<div class="row w-100 h-100 d-flex-row-reverse d-lg-row">
+											<div class="col-12 col-lg-6 p-0">
+											</div>
+											<div class="col-lg-6 p-0">
+												<div class="hero-content text-white">
+													<h1 class="display-4 fw-bold mb-3 carousel-item-title">
+														JOYin隨時在這裡 歡迎來聯絡
+													</h1>
+													<p class="carousel-item-lead mb-0">無論是業務合作、產品諮詢或系統DEMO 都歡迎與JOYin聯繫
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+
+		<!-- Form Section -->
+		<section class="form-section pt-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-11 m-auto bg-black py-5">
+						<header class="section-header">
+							<h2 class="text-center">讓我們幫助您的數位業務發展</h2>
+							<p class="text-center">Contact Us</p>
+						</header>
+						<div class="section-container mt-5">
+							<div class="row position-relative">
+								<div class="col-11 m-auto">
+									<!-- 表單區塊 -->
+									<div class="container">
+										<form class="g-3 p-0 needs-validation" novalidate>
+											<div class="row g-3 mb-3">
+												<!-- 姓名、電子郵件 -->
+												<div class="col-12 col-md-6">
+													<div class="row">
+														<!-- 姓名 -->
+														<div class="col-12 mb-3">
+															<div class="row">
+																<label for="name"
+																	class="col-4 col-md-4 col-form-label text-end text-white">姓名
+																	<span class="text-required">*</span></label>
+																<div class="col-8 col-md-8">
+																	<input type="text" class="form-control" id="name"
+																		placeholder="" required>
+																</div>
+																
+															</div>
+														</div>
+														<!-- 電子郵件 -->
+														<div class="col-12">
+															<div class="row">
+																<label for="email"
+																	class="col-4 col-md-4 col-form-label text-end text-white">Email
+																	<span class="text-required">*</span></label>
+																<div class="col-8 col-md-8">
+																	<input type="email" class="form-control" id="email"
+																		placeholder="" required>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<!-- 公司名稱、公司職務 -->
+												<div class="col-12 col-md-6">
+													<div class="row">
+														<!-- 公司名稱 -->
+														<div class="col-12 mb-3">
+															<div class="row">
+																<label for="company"
+																	class="col-4 col-md-4 col-form-label text-end text-white">公司名稱</label>
+																<div class="col-8 col-md-8">
+																	<input type="text" class="form-control" id="company"
+																		placeholder="">
+																</div>
+															</div>
+														</div>
+
+														<!-- 公司職務 -->
+														<div class="col-12">
+															<div class="row">
+																<label for="position"
+																	class="col-4 col-md-4 col-form-label text-end text-white">公司職務</label>
+																<div class="col-8 col-md-8">
+																	<input type="text" class="form-control"
+																		id="position" placeholder="">
+																</div>
+															</div>
+														</div>
+
+													</div>
+												</div>
+											</div>
+
+											<!-- 服務項目 -->
+											<div class="row mb-3 align-items-center">
+												<label for="subject"
+													class="col-4 col-md-2 col-form-label text-end text-white">服務項目
+													<span class="text-required">*</span></label>
+												<div class="col-8 col-md-10">
+													<!-- 服務項目 單選 -->
+													<div class="row g-3 g-lg-0">
+														<div class="col-12 col-md-6 col-lg-3">
+															<input type="radio" name="subject-title" id="" required>
+															<label for="subject-title" class="text-white">廣告方案洽詢</label>
+														</div>
+														<div class="col-12 col-md-6 col-lg-3">
+															<input type="radio" name="subject-title" id="">
+															<label for="subject-title" class="text-white">產品操作問題</label>
+														</div>
+														<div class="col-12 col-md-6 col-lg-3">
+															<input type="radio" name="subject-title" id="">
+															<label for="subject-title" class="text-white">成為合作夥伴</label>
+														</div>
+														<div class="col-12 col-md-6 col-lg-3">
+															<input type="radio" name="subject-title" id="">
+															<label for="subject-title" class="text-white">其他</label>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<!-- 聯繫內容 -->
+											<div class="row mb-3">
+												<label for="message"
+													class="col-4 col-md-2 col-form-label text-end text-white">聯繫內容
+													<span class="text-required">*</span></label>
+												<div class="col-8 col-md-10">
+													<textarea class="form-control" id="message" rows="5"
+														placeholder="請輸入您欲與我們聯繫的內容" required></textarea>
+												</div>
+											</div>
+
+											<!-- 提交按鈕 -->
+											<div class="row">
+												<div class="col-12 text-center">
+													<button type="submit" class="btn btn-danger px-5">submit</button>
+												</div>
+											</div>
+										</form>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+		</section>
+
+
+	</main>
+
+
+	<!-- Footer -->
+	<footer class="footer mt-5 py-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-11 m-auto">
+					<div class="row">
+						<div class="col-12 col-lg-4">
+							<div class="d-flex flex-column justify-content-between h-100">
+								<div>
+									<img src="images/joyin-logo.svg" alt="JOYin Logo" class="img-fluid">
+									<p class="mt-3">我們一起開創數位的未來<br>歡迎諮詢</p>
+								</div>
+
+								<span class="copyright d-none d-lg-block">
+									Joyin © 2025. All rights reserved.
+								</span>
+							</div>
+						</div>
+						<div class="col-12 col-lg-8 mt-3 mt-lg-0">
+							<div class="row">
+								<div class="col-6 col-lg-3">
+									<ul class="list-unstyled">
+										<li class="">
+											<a href="index.html">
+												首頁
+											</a>
+										</li>
+										<li>
+											<a href="about.html">
+												關於我們
+											</a>
+										</li>
+										<li>
+											<a href="coupon.html">
+												優惠券平台
+											</a>
+										</li>
+										<li>
+											<a href="lbs.html">
+												周邊好康
+											</a>
+										</li>
+										<li>
+											<a href="game.html">
+												任務遊戲
+											</a>
+										</li>
+										<li>
+											<a href="case.html">
+												成功案例
+											</a>
+										</li>
+										<li>
+											<a href="contact.html">
+												聯絡我們
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-6 col-lg-3">
+									<ul class="list-unstyled">
+										<li>
+											<a href="#">
+												隱私條款
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												服務條款
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												常見問題
+											</a>
+										</li>
+									</ul>
+								</div>
+
+								<div class="col-12 col-lg-6 mt-3 mt-lg-0">
+									<div class="contact-info d-flex flex-column justify-content-between h-100">
+										<h5 class="mb-3">聯絡我們</h5>
+										<p>
+											TEL:+886-937-773-381<br>
+											Mail:eva.chen@systex.com<br>
+											好康多據點：235台灣中和區連城路168-2號6樓<br>
+											週一至週五 9:00 AM – 6:00 PM<br>
+											週六、週日及國定假日休息<br>
+										</p>
+									<ul class="d-flex gap-3 list-unstyled">
+										<li class="social-link">
+											<a href="#">
+												<img src="images/joyin-fb-icon.svg" alt="Facebook Icon"
+													class="img-fluid">
+											</a>
+										</li>
+										<li class="social-link">
+											<a href="#">
+												<img src="images/joyin-ig-icon.svg" alt="Instagram Icon"
+													class="img-fluid">
+											</a>
+										</li>
+
+										<li class="social-link">
+											<a href="#">
+												<img src="images/joyin-yt-icon.svg" alt="Youtube Icon"
+													class="img-fluid">
+											</a>
+										</li>
+									</ul>
+
+										<span class="copyright d-block d-lg-none">
+											Joyin © 2025. All rights reserved.
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</footer>
+
+	<!-- Go Top Button -->
+	<button id="goTopBtn" class="go-top-btn" aria-label="回到頂部">
+		<img src="/images/joyin-gotop-icon.svg" alt="回到頂部">
+	</button>
+
+	<!-- Bootstrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Custom JS -->
+	<script type="module" src="/src/js/public.js"></script>
+
+</body>
+
+</html>

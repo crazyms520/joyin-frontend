@@ -1,0 +1,780 @@
+// ===========================================
+// Index 頁面樣式 - 巢狀寫法
+// ===========================================
+
+// 引入 Bootstrap 基礎樣式
+@import "../base/variables";
+@import "../base/core";
+@import "../base/base";
+@import "../base/components";
+@import "../base/utilities";
+@import "../layout/header";
+@import "../layout/footer";
+@import "@splidejs/splide/css";
+
+// ===========================================
+// 全域設定
+// ===========================================
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+}
+
+
+// ===========================================
+// 共用 樣式
+// ===========================================
+.section-header {
+    text-align: center;
+
+    h1,
+    h2,
+    h3 {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 3px solid $dark;
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+        font-weight: 700;
+        color: $dark;
+    }
+
+    p {
+        font-size: clamp(1rem, 3vw, 1.25rem);
+        color: $joyin-gray;
+    }
+}
+
+.section-container {
+    // max-width: 1080px;
+}
+
+// ===========================================
+// Hero Section 樣式
+// ===========================================
+.hero-section {
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+
+    @include media-breakpoint-down(lg) {
+        // margin-top: 69px;
+    }
+
+    .carousel {
+        height: 400px;
+        min-height: 540px;
+
+        @include media-breakpoint-down(lg) {
+            min-height: 300px;
+        }
+
+        .carousel-bg {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+
+            img {
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .carousel-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0);
+                z-index: 1;
+            }
+
+            .container {
+                z-index: 2;
+            }
+        }
+
+        .carousel-inner {
+            height: 100%;
+        }
+
+        .carousel-item {
+            height: 100%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            padding: 2rem 1rem;
+            mix-blend-mode: multiply;
+            background-blend-mode: multiply;
+            background-color: rgba(0, 0, 0, 0.5);
+
+            .carousel-item-title {
+                font-size: 2rem;
+                font-weight: 700;
+                line-height: 1.2;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                text-align: center;
+
+                @include media-breakpoint-down(lg) {
+                    font-size: 2.5rem;
+                }
+
+                @include media-breakpoint-down(md) {
+                    font-size: 2rem;
+                    text-align: center;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .carousel-item-lead {
+                font-size: 1.25rem;
+                opacity: 0.9;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+                text-align: center;
+
+                @include media-breakpoint-down(lg) {
+                    font-size: 1.1rem;
+                }
+
+                @include media-breakpoint-down(md) {
+                    font-size: 1rem;
+                    margin-bottom: 1.5rem;
+                    text-align: center;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 0.9rem;
+                }
+            }
+
+            .d-flex {
+
+                // 手機響應式
+                @media (max-width: 766.98px) {
+                    flex-direction: column;
+                    gap: 1rem !important;
+
+                    .btn {
+                        width: 100%;
+                        max-width: 300px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+
+        .hero-image {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 2rem 0;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+
+            i {
+                animation: float 2s ease-in-out infinite;
+
+                // 手機響應式
+                @media (max-width: 766.98px) {
+                    font-size: 3rem !important;
+                    margin-top: 1rem;
+                }
+
+                // 小手機響應式
+                @media (max-width: 574.98px) {
+                    font-size: 2rem !important;
+                }
+            }
+        }
+
+        // 輪播指示器
+        .carousel-indicators {
+            bottom: 29px;
+            z-index: 2;
+
+            button {
+                width: 11px;
+                height: 11px;
+                border-radius: 49%;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                background: transparent;
+                margin: -1 5px;
+                transition: all -1.3s ease;
+
+                &.active {
+                    background: white;
+                    border-color: white;
+                }
+
+                &:hover {
+                    border-color: white;
+                }
+            }
+
+            // 手機響應式
+            @media (max-width: 766.98px) {
+                bottom: 19px;
+            }
+        }
+
+        // 輪播控制按鈕
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 24px;
+            height: 24px;
+            background: $joyin-red;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all -1.3s ease;
+            z-index: 2;
+
+            &:hover {
+                background: $joyin-red;
+            }
+
+            @include media-breakpoint-down(lg) {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        .carousel-control-prev {
+            left: 30px;
+
+            @include media-breakpoint-down(lg) {
+                left: 15px;
+            }
+        }
+
+        .carousel-control-next {
+            right: 30px;
+
+            @include media-breakpoint-down(lg) {
+                right: 15px;
+            }
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+}
+
+// ===========================================
+// Choose Section 樣式
+// ===========================================
+.why-choose-us-section {
+    .accordion {
+        .accordion-item {
+            .accordion-header {
+                .accordion-button {
+                    padding: 1rem 0;
+                    font-size: clamp(1.5rem, 5vw, 2rem);
+                    box-shadow: none;
+                    border-bottom: 0 solid var(--bs-border-color);
+
+                    @include media-breakpoint-down(lg) {
+                        font-size: clamp(1rem, 5vw, 1.5rem);
+                    }
+
+                    &:not(.collapsed) {
+                        color: $dark;
+                        background-color: $white;
+                        border-bottom: 1px solid var(--bs-border-color);
+                        padding-bottom: .5rem;
+                    }
+                }
+            }
+
+            .accordion-body {
+                padding: .5rem 0;
+
+                >ul {
+                    list-style: none;
+
+                    >li {
+                        position: relative;
+                        font-size: clamp(1rem, 3vw, 1.5rem);
+                        color: $joyin-gray;
+
+                        @include media-breakpoint-down(lg) {
+                            font-size: 1rem;
+                        }
+
+                        &:before {
+                            content: '•';
+                            position: absolute;
+                            top: calc(50% - 0.5rem);
+                            left: -1rem;
+                            font-size: 1rem;
+                            color: $joyin-gray;
+                            vertical-align: text-top;
+
+                            @media (max-width: 766.98px) {
+                                top: 0;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    .counter {
+
+        >.row {
+            @include media-breakpoint-down(lg) {
+                gap: 0.5rem !important;
+                justify-content: space-between;
+            }
+        }
+
+        .counter-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem 0.5rem;
+            text-align: center;
+            background-color: #ffecec;
+
+            @include media-breakpoint-up(lg) {
+                width: calc(25% - 0.25rem);
+
+                &:nth-of-type(even) {
+                    background-color: #ffd1d2;
+                }
+            }
+
+            @include media-breakpoint-down(lg) {
+                width: calc(50% - 0.25rem);
+
+                &:nth-of-type(2),
+                &:nth-of-type(3) {
+                    background-color: #ffd1d2;
+                }
+            }
+
+            .counter-count {
+                font-size: clamp(2rem, 5vw, 3rem);
+
+                @include media-breakpoint-between(lg, xl) {
+                    font-size: clamp(2rem, 5vw, 2.5rem);
+                }
+            }
+
+            .counter-title {
+                font-size: clamp(1rem, 3vw, 1.5rem);
+            }
+
+            .counter-subtitle {
+                font-size: 12px;
+                text-transform: uppercase;
+                color: $joyin-gray;
+            }
+        }
+    }
+}
+
+// ===========================================
+// Electronic Coupons Section 樣式
+// ===========================================
+.electronic-coupons-section {
+    @include media-breakpoint-down(md) {
+        padding-top: 3rem;
+        background-color: #f2f2f2;
+    }
+
+    .section-container {
+        .ec-item-col {
+            .ec-item {
+                display: flex;
+                flex-direction: row;
+
+                @include media-breakpoint-down(md) {
+                    flex-direction: column;
+                    margin-bottom: 1rem;
+                }
+
+                &.md-reverse {
+                    @include media-breakpoint-between(md, lg) {
+                        flex-direction: row-reverse;
+                    }
+                }
+
+                &.lg-reverse {
+                    @include media-breakpoint-up(lg) {
+                        flex-direction: row-reverse;
+                    }
+                }
+
+                .ec-content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    background-color: #f2f2f2;
+
+                    @include media-breakpoint-down(md) {
+                        padding: 1rem 0 !important;
+                        background-color: transparent !important;
+                    }
+
+                    h4 {
+                        font-size: 1.125rem;
+                        text-align: left;
+                    }
+
+                    p {
+                        font-size: 0.875rem;
+                        color: #666;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+// ===========================================
+// Video Editing Section 樣式
+// ===========================================
+.video-editing-section {
+    .video-item {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+        &.ve-border {
+            border-top: 1px solid var(--bs-border-color);
+            border-bottom: 1px solid var(--bs-border-color);
+
+            @include media-breakpoint-down(lg) {
+                display: none;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: calc(50% - 0.5px);
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 1px;
+                background-color: var(--bs-border-color);
+                // border-bottom: 1px solid var(--bs-border-color);
+            }
+        }
+
+        &__content {
+            h4 {
+                font-size: 1.125rem;
+
+                &::first-letter {
+                    color: $joyin-red;
+                }
+            }
+
+            p {
+                font-size: 0.75rem;
+                color: #666;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .accordion {
+        margin: 1rem 0;
+
+        .accordion-item {
+            .accordion-header {
+                .accordion-button {
+                    padding: 1rem 0;
+                    font-size: clamp(1.5rem, 5vw, 2rem);
+                    box-shadow: none;
+                    border-bottom: 0 solid var(--bs-border-color);
+                    // padding-bottom: .5rem;
+
+                    @include media-breakpoint-down(lg) {
+                        font-size: clamp(1rem, 5vw, 1.5rem);
+                    }
+
+                    &:not(.collapsed) {
+                        color: $dark;
+                        background-color: $white;
+                        border-bottom: 1px solid var(--bs-border-color);
+                        padding-bottom: .5rem;
+                    }
+
+                    >span {
+                        color: $joyin-red;
+                    }
+                }
+            }
+
+            .accordion-body {
+                padding: .5rem 0;
+
+                >span {
+                    display: block;
+                    font-size: clamp(1rem, 3vw, 1.5rem);
+                    color: $joyin-gray;
+
+                    @include media-breakpoint-down(lg) {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ===========================================
+// Data Management Section 樣式
+// ===========================================
+.data-management-section {
+    .data-item {
+        &__icon {
+            padding: 3rem 2rem;
+            text-align: center;
+            background-color: #f2f2f2;
+
+            @include media-breakpoint-down(md) {
+                padding: 2rem 1rem;
+            }
+
+            h4 {
+                margin-top: .5rem;
+                margin-bottom: 0;
+                font-size: clamp(1rem, 3vw, 1.125rem);
+
+                @include media-breakpoint-down(md) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &__content {
+            margin-top: .5rem;
+            font-size: 0.75rem;
+            color: #666;
+        }
+    }
+
+    .splide {
+        &__arrow {
+            width: 1rem;
+            height: 1rem;
+            color: $joyin-red;
+            background-color: transparent;
+            font-size: 1rem;
+
+            svg {
+                fill: $joyin-red;
+                height: 1rem;
+                width: 1rem;
+            }
+
+            &--prev {
+                left: -1rem;
+            }
+
+            &--next {
+                right: -1rem;
+            }
+        }
+    }
+}
+
+// ===========================================
+// Mission Game Section 樣式
+// ===========================================
+.mission-game-section {
+    .mission-game-item {
+        &__image {
+            position: relative;
+
+            &-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: rgba(255, 255, 255, 0.8);
+
+                h4 {
+                    font-size: 1.125rem;
+                }
+
+            }
+
+
+        }
+
+        &__content {
+            margin-top: .5rem;
+            font-size: 0.75rem;
+            color: #666;
+        }
+    }
+}
+
+// ===========================================
+// Store Discount Map Section 樣式
+// ===========================================
+.store-discount-map-section {
+    .section-header {
+        @include media-breakpoint-down(lg) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+
+    .store-discount-map-item {
+        cursor: auto;
+
+        &:hover {
+            .store-discount-map-item__image {
+                z-index: 1;
+
+                &-overlay {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &__image {
+            position: relative;
+
+            &-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(220, 0, 0, 0.5);
+                color: rgba(255, 255, 255, 1);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+
+                @include media-breakpoint-down(xl) {
+                    opacity: 1;
+                    background-color: rgba(220, 0, 0, 0.5);
+                }
+
+                h4 {
+                    font-size: 1.125rem;
+                }
+
+            }
+
+
+        }
+
+        &__content {
+            margin-top: .5rem;
+            font-size: 0.75rem;
+            color: #666;
+        }
+    }
+
+}
+
+// ===========================================
+// Features Section 樣式
+// ===========================================
+.feature-icon {
+    i {
+        transition: transform 0.3s ease;
+    }
+}
+
+.card {
+    transition: all 0.3s ease;
+    border: none;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+
+        .feature-icon i {
+            transform: scale(1.1);
+        }
+    }
+}
+
+
+// ===========================================
+// 動畫效果
+// ===========================================
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>About - Joyin Frontend</title>
+
+	<!-- Bootstrap Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="/src/styles/page/about.scss">
+</head>
+
+<body>
+	<!-- Header -->
+	<header class="header">
+		<nav class="navbar navbar-expand-lg navbar-light bg-white">
+			<div class="container-fluid">
+				<div class="col-11 col-xl-9 m-auto">
+					<div class="row justify-content-between">
+						<div class="col-12 col-lg-2">
+							<div class="row justify-content-between align-items-center">
+								<!-- Logo -->
+								<div class="col-3 col-lg-12">
+									<a class="navbar-brand fw-bold text-primary" href="index.html">
+										<img src="images/joyin-logo.svg" alt="JOYin Logo" class="img-fluid">
+									</a>
+								</div>
+								<!-- Mobile Toggle Button -->
+								<div class="col-9 d-lg-none text-end">
+									<div class="d-flex justify-content-end align-items-center">
+										<div class="searchBox" id="searchBoxMobile">
+											<input class="searchInput" type="text" name="" placeholder="Search"
+												id="searchInputMobile">
+										<button class="searchButton" id="searchButtonMobile">
+											<img src="images/joyin-search-icon.svg" alt="JOYin Search Icon"
+												class="img-fluid img-icon">
+										</button>
+									</div>
+
+									<div class="personBox">
+										<a href="#" class="d-inline-flex">
+											<img src="images/joyin-person-icon.svg" alt="JOYin Person Icon"
+												class="img-fluid img-icon">
+										</a>
+									</div>
+
+									<div class="toggleBox">
+										<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+											data-bs-target="#navbarNav" aria-controls="navbarNav"
+											aria-expanded="false" aria-label="Toggle navigation">
+											<img src="images/joyin-menu-icon.svg" alt="JOYin Menu Icon"
+												class="img-fluid img-icon">
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-lg-10">
+							<!-- Navigation Menu -->
+							<div class="collapse navbar-collapse" id="navbarNav">
+								<ul class="navbar-nav ms-auto align-items-center">
+									<li class="nav-item">
+										<a class="nav-link" href="index.html">首頁</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link active" href="about.html">關於我們</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="coupon.html">優惠券平台</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="lbs.html">周邊好康</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="game.html">任務遊戲</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="case.html">成功案例</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="contact.html">聯絡我們</a>
+									</li>
+									<li class="nav-item mx-3 justify-content-end align-items-center d-none d-lg-flex">
+										<div class="searchBox" id="searchBox">
+										<input class="searchInput" type="text" name="" placeholder="Search"
+											id="searchInput">
+										<button class="searchButton" id="searchButton">
+											<img src="images/joyin-search-icon.svg" alt="JOYin Search Icon"
+												class="img-fluid img-icon">
+										</button>
+									</div>
+								</li>
+								<li class="nav-item d-none d-lg-flex">
+									<a href="#" class="d-inline-flex">
+										<img src="images/joyin-person-icon.svg" alt="JOYin Person Icon"
+											class="img-fluid img-icon">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<!-- Hero Banner Carousel -->
+		<section class="hero-section">
+			<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+				<!-- Carousel Inner -->
+				<div class="carousel-inner">
+					<!-- Slide 1 -->
+					<div class="carousel-item active">
+						<div class="carousel-bg position-relative">
+							<img src="images/about/about-banner.webp" alt="Hero Image"
+								class="w-100 h-100 object-fit-cover">
+							<div class="carousel-overlay"></div>
+							<div
+								class="position-absolute top-0 start-0 w-100 h-100 p-0 d-none d-lg-flex align-items-center justify-content-center">
+								<div class="container">
+									<div class="col-11 m-auto">
+										<div class="row w-100 h-100">
+											<div class="col-12 col-lg-6 p-0">
+												<div class="hero-content text-white">
+													<h1 class="display-4 fw-bold mb-3 carousel-item-title">
+														JOYin整合行銷的最佳夥伴</h1>
+													<p class="carousel-item-lead mb-0">從創意到技術，讓每次推廣超有感</p>
+												</div>
+											</div>
+											<div class="col-lg-6 p-0"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+
+		<!-- Brand Info Section -->
+		<section class="brand-info-section mt-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-11 m-auto">
+						<header class="section-header d-block d-lg-none">
+							<h1 class="text-center">JOYin整合行銷的最佳夥伴</h1>
+							<p class="text-center">從創意到技術，讓每次推廣超有感</p>
+						</header>
+						<div class="section-container">
+							<div class="brand-info-row">
+								<div class="row">
+									<div class="col-12 col-lg-6">
+										<div class="brand-info-image">
+											<picture class="ratio ratio-16x9">
+												<img src="images/about/about-pic-01.webp" alt="JOYin"
+													class="img-fluid">
+											</picture>
+										</div>
+									</div>
+									<div class="col-12 col-lg-6">
+										<div class="brand-info-content">
+											<span>01</span>
+											<h3>品牌故事</h3>
+											<p>
+												JOYin為靖誠資訊股份有限公司旗下專責數位行銷雇用團隊，
+												整合母公司在資訊服務領域的技術底蘊與系統能力，
+												弭伸打造電子優惠券平台、互動任務模組、商店焠合與行銷內容製作等
+												多頂樞組化服務，協助企業與政府單位
+												快速導入靈活、有感、可控脈的行銷解決方案，
+												實現品牌的行動力與轉換力。
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="brand-info-row mt-3 mt-lg-5">
+								<div class="row">
+									<div class="col-12 col-lg-6">
+										<div class="brand-info-image">
+											<picture class="ratio ratio-16x9">
+												<img src="images/about/about-pic-02.webp" alt="JOYin"
+													class="img-fluid">
+											</picture>
+										</div>
+									</div>
+									<div class="col-12 col-lg-6">
+										<div class="brand-info-content d-flex flex-column justify-content-center h-100">
+											<span>02</span>
+											<h3>願景與使命</h3>
+											<p>
+												以數據驅動、內容為本，成為最值得信賴的行銷技術顧問團隊
+												JOYin的願景是成為企業在數位轉型與行銷創新的長期夥伴，
+												致力於打造「好上手、可複製、能擴散」的行銷模組，透過跨部門協作、
+												科技整合與內容創意，讓每一場活動都有清晰的目標、清楚的成果，
+												並真正為品牌創造價值與效益。
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+
+		<!-- Team Introduction Section -->
+		<section class="team-introduction-section mt-5 py-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-11 m-auto">
+						<header class="section-header">
+							<h2 class="text-center">團隊介紹</h2>
+							<p class="d-none d-xl-block text-center mb-0">
+								JOYin團隊集結來自不同領域的專業人才，從行銷策略、設計開發到內容企劃，致力於提供創新且具執行力的解決方案。
+							</p>
+							<p class="d-none d-xl-block text-center">各團隊之間依據職能專業分工，跨部門團隊合作，致力專案推動更加多元精準、嶄新高效。</p>
+							<p class="d-block d-xl-none text-center">
+								JOYin團隊集結來自不同領域的專業人才，從行銷策略、設計開發到內容企劃，致力於提供創新且具執行力的解決方案。
+								各團隊之間依據職能專業分工，跨部門團隊合作，致力專案推動更加多元精準、嶄新高效。</p>
+						</header>
+						<div class="section-container mt-5">
+							<div class="row position-relative">
+								<div class="col-11 m-auto">
+									<section class="splide splide-team" aria-label="Splide Team Introduction HTML">
+										<div class="splide__track">
+											<ul class="splide__list">
+												<li class="splide__slide">
+													<div class="team-item">
+														<div class="team-item__card">
+															<div class="card bg-white">
+																<picture class="d-inline-block ratio ratio-1x1">
+																	<img src="images/about/about-member-01.webp"
+																		class="card-img-top rounded-circle img-fluid"
+																		alt="...">
+																</picture>
+																<div class="card-body">
+																	<h5 class="card-title">行銷策略顧問</h5>
+																	<p>整合品牌定位與活動規劃</p>
+																	<p>協助打造具方向性與成效導向之行銷方案</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li class="splide__slide">
+													<div class="team-item">
+														<div class="team-item__card">
+															<div class="card bg-white">
+																<picture class="d-inline-block ratio ratio-1x1">
+																	<img src="images/about/about-member-02.webp"
+																		class="card-img-top rounded-circle img-fluid"
+																		alt="...">
+																</picture>
+																<div class="card-body">
+																	<h5 class="card-title">系統應用顧問</h5>
+																	<p>整合品牌定位與活動規劃</p>
+																	<p>協助打造具方向性與成效導向之行銷方案</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+
+												<li class="splide__slide">
+													<div class="team-item">
+														<div class="team-item__card">
+															<div class="card bg-white">
+																<picture class="d-inline-block ratio ratio-1x1">
+																	<img src="images/about/about-member-03.webp"
+																		class="card-img-top rounded-circle img-fluid"
+																		alt="...">
+																</picture>
+																<div class="card-body">
+																	<h5 class="card-title">行銷策略企劃</h5>
+																	<p>整合品牌定位與活動規劃</p>
+																	<p>協助打造具方向性與成效導向之行銷方案</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</section>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Success Stories Section -->
+		<section class="success-stories-section mt-5 ">
+			<div class="container">
+				<div class="row">
+					<div class="col-11 m-auto">
+						<header class="section-header">
+							<h2 class="text-center">成功案例</h2>
+							<p> Success Stories</p>
+						</header>
+						<div class="section-container mt-5">
+							<div class="row position-relative">
+								<div class="col-11 m-auto">
+									<section class="splide splide-success" aria-label="Splide Success Stories HTML">
+										<div class="splide__track">
+											<ul class="splide__list">
+												<li class="splide__slide">
+													<div class="success-item">
+														<div class="success-item__card">
+															<div class="card mb-3">
+																<div class="row g-0">
+																	<div class="col-12 col-lg-6">
+																		<picture
+																			class="d-inline-block ratio ratio-4x3 w-100">
+																			<img src="images/about/about-pic-03.webp"
+																				class="img-fluid" alt="...">
+																		</picture>
+																	</div>
+																	<div class="col">
+																		<div class="card-body h-100">
+																			<h5 class="card-title">台北市民卡</h5>
+																			<p class="card-text">This is a wider card
+																				with
+																				supporting text below as a natural
+																				lead-in to
+																				additional content. This content is a
+																				little bit
+																				longer.</p>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li class="splide__slide">
+													<div class="success-item">
+														<div class="success-item__card">
+															<div class="card mb-3">
+																<div class="row g-0">
+																	<div class="col-12 col-lg-6">
+																		<picture
+																			class="d-inline-block ratio ratio-4x3 w-100">
+																			<img src="images/about/about-pic-03.webp"
+																				class="img-fluid" alt="...">
+																		</picture>
+																	</div>
+																	<div class="col">
+																		<div class="card-body h-100">
+																			<h5 class="card-title">新北市民卡</h5>
+																			<p class="card-text">This is a wider card
+																				with
+																				supporting text below as a natural
+																				lead-in to
+																				additional content. This content is a
+																				little bit
+																				longer.</p>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li class="splide__slide">
+													<div class="success-item">
+														<div class="success-item__card">
+															<div class="card mb-3">
+																<div class="row g-0">
+																	<div class="col-12 col-lg-6">
+																		<picture
+																			class="d-inline-block ratio ratio-4x3 w-100">
+																			<img src="images/about/about-pic-03.webp"
+																				class="img-fluid" alt="...">
+																		</picture>
+																	</div>
+																	<div class="col">
+																		<div class="card-body h-100">
+																			<h5 class="card-title">桃園市民卡</h5>
+																			<p class="card-text">This is a wider card
+																				with
+																				supporting text below as a natural
+																				lead-in to
+																				additional content. This content is a
+																				little bit
+																				longer.</p>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</section>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</section>
+
+	</main>
+
+
+	<!-- Footer -->
+	<footer class="footer mt-5 py-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-11 m-auto">
+					<div class="row">
+						<div class="col-12 col-lg-4">
+							<div class="d-flex flex-column justify-content-between h-100">
+								<div>
+									<img src="images/joyin-logo.svg" alt="JOYin Logo" class="img-fluid">
+									<p class="mt-3">我們一起開創數位的未來<br>歡迎諮詢</p>
+								</div>
+
+								<span class="copyright d-none d-lg-block">
+									Joyin © 2025. All rights reserved.
+								</span>
+							</div>
+						</div>
+						<div class="col-12 col-lg-8 mt-3 mt-lg-0">
+							<div class="row">
+								<div class="col-6 col-lg-3">
+									<ul class="list-unstyled">
+										<li class="">
+											<a href="index.html">
+												首頁
+											</a>
+										</li>
+										<li>
+											<a href="about.html">
+												關於我們
+											</a>
+										</li>
+										<li>
+											<a href="coupon.html">
+												優惠券平台
+											</a>
+										</li>
+										<li>
+											<a href="lbs.html">
+												周邊好康
+											</a>
+										</li>
+										<li>
+											<a href="game.html">
+												任務遊戲
+											</a>
+										</li>
+										<li>
+											<a href="case.html">
+												成功案例
+											</a>
+										</li>
+										<li>
+											<a href="contact.html">
+												聯絡我們
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-6 col-lg-3">
+									<ul class="list-unstyled">
+										<li>
+											<a href="#">
+												隱私條款
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												服務條款
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												常見問題
+											</a>
+										</li>
+									</ul>
+								</div>
+
+								<div class="col-12 col-lg-6 mt-3 mt-lg-0">
+									<div class="contact-info d-flex flex-column justify-content-between h-100">
+										<h5 class="mb-3">聯絡我們</h5>
+										<p>
+											TEL:+886-937-773-381<br>
+											Mail:eva.chen@systex.com<br>
+											好康多據點：235台灣中和區連城路168-2號6樓<br>
+											週一至週五 9:00 AM – 6:00 PM<br>
+											週六、週日及國定假日休息<br>
+										</p>
+									<ul class="d-flex gap-3 list-unstyled">
+										<li class="social-link">
+											<a href="#">
+												<img src="images/joyin-fb-icon.svg" alt="Facebook Icon"
+													class="img-fluid">
+											</a>
+										</li>
+										<li class="social-link">
+											<a href="#">
+												<img src="images/joyin-ig-icon.svg" alt="Instagram Icon"
+													class="img-fluid">
+											</a>
+										</li>
+
+										<li class="social-link">
+											<a href="#">
+												<img src="images/joyin-yt-icon.svg" alt="Youtube Icon"
+													class="img-fluid">
+											</a>
+										</li>
+									</ul>
+
+										<span class="copyright d-block d-lg-none">
+											Joyin © 2025. All rights reserved.
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</footer>
+
+	<!-- Go Top Button -->
+	<button id="goTopBtn" class="go-top-btn" aria-label="回到頂部">
+		<img src="/images/joyin-gotop-icon.svg" alt="回到頂部">
+	</button>
+
+	<!-- Bootstrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Custom JS -->
+	<script type="module" src="/src/js/public.js"></script>
+	<script type="module" src="/src/js/about.js"></script>
+
+</body>
+
+</html>

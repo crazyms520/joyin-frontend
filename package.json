@@ -1,0 +1,28 @@
+{
+  "name": "joyin-frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --config config/vite.config.js",
+    "build": "vite build --config config/vite.config.js",
+    "build:local": "vite build --config config/vite.config.local.js",
+    "build:css": "vite build --config config/vite.config.simple.js",
+    "build:scss": "vite build --config config/vite.config.scss.js",
+    "build:scss-only": "node scripts/build-scss.js",
+    "build:all": "npm run build:scss && npm run build:local",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "npm:rolldown-vite@7.1.12"
+  },
+  "overrides": {
+    "vite": "npm:rolldown-vite@7.1.12"
+  },
+  "dependencies": {
+    "@splidejs/splide": "^4.1.4",
+    "@splidejs/splide-extension-grid": "^0.4.1",
+    "bootstrap": "^5.3.3",
+    "sass": "^1.93.2"
+  }
+}

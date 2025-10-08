@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Index - Joyin Frontend</title>
+
+	<!-- Bootstrap Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="/src/styles/page/index.scss">
+</head>
+
+<body>
+	<!-- Header -->
+	<header class="header">
+		<nav class="navbar navbar-expand-lg navbar-light bg-white">
+			<div class="container-fluid">
+				<div class="col-11 col-xl-9 m-auto">
+					<div class="row justify-content-between">
+						<div class="col-12 col-lg-2">
+							<div class="row justify-content-between align-items-center">
+								<!-- Logo -->
+								<div class="col-3 col-lg-12">
+									<a class="navbar-brand fw-bold text-primary" href="index.html">
+										<img src="images/joyin-logo.svg" alt="JOYin Logo" class="img-fluid">
+									</a>
+								</div>
+								<!-- Mobile Toggle Button -->
+								<div class="col-9 d-lg-none text-end">
+									<div class="d-flex justify-content-end align-items-center">
+										<div class="searchBox" id="searchBoxMobile">
+											<input class="searchInput" type="text" name="" placeholder="Search"
+												id="searchInputMobile">
+											<button class="searchButton" id="searchButtonMobile">
+												<img src="images/joyin-search-icon.svg" alt="JOYin Search Icon"
+													class="img-fluid img-icon">
+											</button>
+										</div>
+
+										<div class="personBox">
+											<a href="#" class="d-inline-flex">
+												<img src="images/joyin-person-icon.svg" alt="JOYin Person Icon"
+													class="img-fluid img-icon">
+											</a>
+										</div>
+
+										<div class="toggleBox">
+											<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+												data-bs-target="#navbarNav" aria-controls="navbarNav"
+												aria-expanded="false" aria-label="Toggle navigation">
+												<img src="images/joyin-menu-icon.svg" alt="JOYin Menu Icon"
+													class="img-fluid img-icon">
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-lg-10">
+							<!-- Navigation Menu -->
+							<div class="collapse navbar-collapse" id="navbarNav">
+								<ul class="navbar-nav ms-auto align-items-center">
+									<li class="nav-item">
+										<a class="nav-link active" href="index.html">首頁</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="about.html">關於我們</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="coupon.html">優惠券平台</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="lbs.html">周邊好康</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="game.html">任務遊戲</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="case.html">成功案例</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="contact.html">聯絡我們</a>
+									</li>
+									<li class="nav-item mx-3 justify-content-end align-items-center d-none d-lg-flex">
+										<div class="searchBox" id="searchBox">
+											<input class="searchInput" type="text" name="" placeholder="Search"
+												id="searchInput">
+											<button class="searchButton" id="searchButton">
+												<img src="images/joyin-search-icon.svg" alt="JOYin Search Icon"
+													class="img-fluid img-icon">
+											</button>
+										</div>
+									</li>
+									<li class="nav-item d-none d-lg-flex">
+										<a href="#" class="d-inline-flex">
+											<img src="images/joyin-person-icon.svg" alt="JOYin Person Icon"
+												class="img-fluid img-icon">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<!-- Hero Banner Carousel -->
+		<section class="hero-section">
+			<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+				<!-- Carousel Indicators -->
+				<!-- <div class="carousel-indicators">
+					<button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+						aria-current="true" aria-label="Slide 1"></button>
+					<button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					<button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				</div> -->
+
+				<!-- Carousel Inner -->
+				<div class="carousel-inner">
+					<!-- Slide 1 -->
+					<div class="carousel-item active">
+						<div class="carousel-bg position-relative">
+							<img src="images/index/index-banner.webp" alt="Hero Image"
+								class="w-100 h-100 object-fit-cover">
+							<div class="carousel-overlay"></div>
+							<div
+								class="container position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+								<div class="row w-100">
+									<div class="col-lg-6">
+									</div>
+									<div class="col-12 col-lg-6">
+										<div class="hero-content text-white">
+											<h2 class="display-4 fw-bold mb-3 carousel-item-title">一站式會員專屬優惠平台 1</h2>
+											<p class="carousel-item-lead mb-0">快速導入、多元整合、高效互動</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide 2 -->
+					<div class="carousel-item">
+						<div class="carousel-bg position-relative">
+							<img src="images/index/index-banner.webp" alt="Hero Image"
+								class="w-100 h-100 object-fit-cover">
+							<div class="carousel-overlay"></div>
+							<div
+								class="container position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+								<div class="row w-100">
+									<div class="col-lg-6">
+									</div>
+									<div class="col-12 col-lg-6">
+										<div class="hero-content text-white">
+											<h2 class="display-4 fw-bold mb-3 carousel-item-title">一站式會員專屬優惠平台 2</h2>
+											<p class="carousel-item-lead mb-0">快速導入、多元整合、高效互動</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide 3 -->
+					<div class="carousel-item">
+						<div class="carousel-bg position-relative">
+							<img src="images/index/index-banner.webp" alt="Hero Image"
+								class="w-100 h-100 object-fit-cover">
+							<div class="carousel-overlay"></div>
+							<div
+								class="container position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+								<div class="row w-100">
+									<div class="col-lg-6">
+									</div>
+									<div class="col-12 col-lg-6">
+										<div class="hero-content text-white">
+											<h2 class="display-4 fw-bold mb-3 carousel-item-title">一站式會員專屬優惠平台 3</h2>
+											<p class="carousel-item-lead mb-0">快速導入、多元整合、高效互動</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Carousel Controls -->
+				<button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+		</section>
+
+		<!-- Why Choose Us Section -->
+		<section class="why-choose-us-section mt-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-11 m-auto">
+						<header class="section-header">
+							<h1 class="text-center">JOYin 是您數位行銷的最佳夥伴</h1>
+							<p class="text-center">Why Choose us</p>
+						</header>
+						<div class="section-container">
+							<div class="content-image">
+								<picture class="d-inline-block">
+									<img src="images/index/index-section-banner.webp" alt="JOYin" class="img-fluid">
+								</picture>
+							</div>
+
+							<div class="accordion accordion-flush mt-5" id="accordionFlushExample">
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="flush-headingOne">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse"
+											data-bs-target="#flush-collapseOne" aria-expanded="false"
+											aria-controls="flush-collapseOne">
+											提供有效推廣工具
+										</button>
+									</h2>
+									<div id="flush-collapseOne" class="accordion-collapse collapse show"
+										aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+										<div class="accordion-body">
+											<ul class="ps-3">
+												<li>整合優惠平台、B2B 異業合作、遊戲互動與內容製作</li>
+												<li>協助企業一站式服務，強化會員經營與品牌影響力</li>
+												<li>提供電子優惠券與互動遊戲模組</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="flush-headingTwo">
+										<button class="accordion-button collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+											aria-expanded="false" aria-controls="flush-collapseTwo">
+											行銷人力資源管理
+										</button>
+									</h2>
+									<div id="flush-collapseTwo" class="accordion-collapse collapse"
+										aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+										<div class="accordion-body">
+											<ul class="ps-3">
+												<li>整合優惠平台、B2B 異業合作、遊戲互動與內容製作</li>
+												<li>協助企業一站式服務，強化會員經營與品牌影響力</li>
+												<li>提供電子優惠券與互動遊戲模組</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="flush-headingThree">
+										<button class="accordion-button collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+											aria-expanded="false" aria-controls="flush-collapseThree">
+											合作商家資源廣泛
+										</button>
+									</h2>
+									<div id="flush-collapseThree" class="accordion-collapse collapse"
+										aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+										<div class="accordion-body">
+											<ul class="ps-3">
+												<li>整合優惠平台、B2B 異業合作、遊戲互動與內容製作</li>
+												<li>協助企業一站式服務，強化會員經營與品牌影響力</li>
+												<li>提供電子優惠券與互動遊戲模組</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item border-bottom">
+									<h2 class="accordion-header" id="flush-headingFour">
+										<button class="accordion-button collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
+											aria-expanded="false" aria-controls="flush-collapseFour">
+											易於掌握活動成效
+										</button>
+									</h2>
+									<div id="flush-collapseFour" class="accordion-collapse collapse"
+										aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+										<div class="accordion-body">
+											<ul class="ps-3">
+												<li>整合優惠平台、B2B 異業合作、遊戲互動與內容製作</li>
+												<li>協助企業一站式服務，強化會員經營與品牌影響力</li>
+												<li>提供電子優惠券與互動遊戲模組</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="counter mt-5">
+								<div class="row g-0">
+									<div class="counter-item">
+										<span class="counter-count">2000</span>
+										<p class="counter-title mb-0">特約商店擴展</p>
+										<span class="counter-subtitle">special stores</span>
+									</div>
+									<div class="counter-item">
+										<span class="counter-count counter-plus">500000</span>
+										<p class="counter-title mb-0">維運會員數</p>
+										<span class="counter-subtitle">number of members</span>
+									</div>
+									<div class="counter-item">
+										<span class="counter-count">200</span>
+										<p class="counter-title mb-0">B2B 異業合作</p>
+										<span class="counter-subtitle">cooperate</span>
+									</div>
+									<div class="counter-item">
+										<span class="counter-count">10</span>
+										<p class="counter-title mb-0">行銷團隊經驗</p>
+										<span class="counter-subtitle">years</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Electronic Coupons Section -->
+		<section class="electronic-coupons-section mt-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-11 m-auto">
+						<header class="section-header">
+							<h3 class="text-center">優惠自動化輕鬆啟動促銷活動</h3>
+							<p class="text-center">Electronic coupons</p>
+						</header>
+
+						<div class="section-container">
+							<div class="row g-0 ec-item-row">
+								<div class="col-12 col-lg-6 ec-item-col">
+									<div class="ec-item">
+										<div class="col-12 col-md-6">
+											<div class="ec-img">
+												<picture class="ratio ratio-4x3">
+													<img src="images/index/index-pic-01.webp" alt="JOYin"
+														class="img-fluid">
+												</picture>
+											</div>
+										</div>
+										<div class="col-12 col-md-6">
+											<div class="ec-content p-3 h-100">
+												<h4>客製化活動設計</h4>
+												<p>可依行銷需求設計不同券種，支援多規格整合，行銷策略更具彈性。</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-lg-6 ec-item-col">
+									<div class="ec-item md-reverse">
+										<div class="col-12 col-md-6">
+											<div class="ec-img">
+												<picture class="ratio ratio-4x3">
+													<img src="images/index/index-pic-02.webp" alt="JOYin"
+														class="img-fluid">
+												</picture>
+											</div>
+										</div>
+										<div class="col-12 col-md-6">
+											<div class="ec-content p-3 h-100">
+												<h4>快速上架、即時核銷</h4>
+												<p>即時整合門市系統、快速核銷回報，操作簡單效率高。</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-lg-6 ec-item-col">
+									<div class="ec-item lg-reverse">
+										<div class="col-12 col-md-6">
+											<div class="ec-img">
+												<picture class="ratio ratio-4x3">
+													<img src="images/index/index-pic-03.webp" alt="JOYin"
+														class="img-fluid">
+												</picture>
+											</div>
+										</div>
+										<div class="col-12 col-md-6">
+											<div class="ec-content p-3 h-100">
+												<h4>多樣券種彈性設計</h4>
+												<p>提供「平台建置」與「平台租賃」兩種方案，企業可依據預算、時程與功能需求彈性選擇。</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-lg-6 ec-item-col">
+									<div class="ec-item md-reverse lg-reverse">
+										<div class="col-12 col-md-6">
+											<div class="ec-img">
+												<picture class="ratio ratio-4x3">
+													<img src="images/index/index-pic-04.webp" alt="JOYin"
+														class="img-fluid">
+												</picture>
+											</div>
+										</div>
+										<div class="col-12 col-md-6">
+											<div class="ec-content p-3 h-100">
+												<h4>即時數據，效果可追蹤</h4>
+												<p>即時整合門市系統、快速核銷回報，操作簡單效率高。</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Video Editing Section -->
+		<section class="video-editing-section mt-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-11 m-auto">
+						<header class="section-header">
+							<h3 class="text-center">行銷影片製作</h3>
+							<p class="text-center">Video Editing</p>
+						</header>
+						<div class="section-container">
+							<div class="row g-0">
+								<div class="video-item ve-border col">
+									<div class="video-item__content py-4 pe-4">
+										<h4>腳本創意設計</h4>
+										<p>由專業團隊量身打造影片腳本，確保故事內容貼近品牌調性與受眾期待。</p>
+										<p>從品牌理念、產品亮點到活動資訊，都能透過精準腳本轉化為具吸引力的影像內容。</p>
+									</div>
+									<div class="video-item__content py-4 pe-4">
+										<h4>專業影像製作團隊</h4>
+										<p>內建導演、攝影師、美術與後製剪輯等專業人員，一站式整合拍攝資源。</p>
+										<p>支援實景拍攝、動畫製作與創意視覺呈現，提升影片品質與品牌專業度。</p>
+									</div>
+								</div>
+
+								<div class="video-item col-12 col-lg-5">
+									<picture class="d-block w-100 ratio ratio-4x3 h-100">
+										<img src="images/index/index-pic-05.webp" alt="JOYin" class="img-fluid">
+									</picture>
+								</div>
+
+								<div class="video-item ve-border col">
+									<div class="video-item__content py-4 ps-4">
+										<h4>跨平台投放應用</h4>
+										<p>影片可用多種比特例格式，無論是Facebook、Instagram、YouTube或LINE都能輕鬆上稿。</p>
+										<p>適用於品牌官網、活動現場、電視螢幕多元載體，提升內容曝光頻率與延伸效益。</p>
+									</div>
+									<div class="video-item__content py-4 ps-4">
+										<h4>成效追蹤優化內容</h4>
+										<p>提供影片播映數據、點擊率、觀看秒數等數據分析，協助評估行銷成效。</p>
+										<p>透過數據進行為調整，優化腳本、剪輯與投放策略，持續提升轉換與用戶黏著度。</p>
+									</div>
+								</div>
+
+								<div class="accordion accordion-flush mt-3 d-block d-lg-none" id="accordionFlushForVE">
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="VE-flush-headingOne">
+											<button class="accordion-button" type="button" data-bs-toggle="collapse"
+												data-bs-target="#VE-flush-collapseOne" aria-expanded="false"
+												aria-controls="VE-flush-collapseOne">
+												<span>腳</span>本創意設計
+											</button>
+										</h2>
+										<div id="VE-flush-collapseOne" class="accordion-collapse collapse show"
+											aria-labelledby="VE-flush-headingOne" data-bs-parent="#accordionFlushForVE">
+											<div class="accordion-body">
+												<span>
+													由專業團隊量身打造影片腳本，確保故事內容貼近品牌調性與受眾期待。
+													從品牌理念、產品亮點到活動資訊，都能透過精準腳本轉化為具吸引力的影像內容。
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="VE-flush-headingTwo">
+											<button class="accordion-button collapsed" type="button"
+												data-bs-toggle="collapse" data-bs-target="#VE-flush-collapseTwo"
+												aria-expanded="false" aria-controls="VE-flush-collapseTwo">
+												<span>跨</span>平台投放應用
+											</button>
+										</h2>
+										<div id="VE-flush-collapseTwo" class="accordion-collapse collapse"
+											aria-labelledby="VE-flush-headingTwo" data-bs-parent="#accordionFlushForVE">
+											<div class="accordion-body">
+												<span>
+													影片可用多種比特例格式，無論是Facebook、Instagram、YouTube或LINE都能輕鬆上稿。
+													適用於品牌官網、活動現場、電視螢幕多元載體，提升內容曝光頻率與延伸效益。
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="VE-flush-headingThree">
+											<button class="accordion-button collapsed" type="button"
+												data-bs-toggle="collapse" data-bs-target="#VE-flush-collapseThree"
+												aria-expanded="false" aria-controls="VE-flush-collapseThree">
+												<span>專</span>業影像製作團隊
+											</button>
+										</h2>
+										<div id="VE-flush-collapseThree" class="accordion-collapse collapse"
+											aria-labelledby="VE-flush-headingThree"
+											data-bs-parent="#accordionFlushForVE">
+											<div class="accordion-body">
+												<span>
+													內建導演、攝影師、美術與後製剪輯等專業人員，一站式整合拍攝資源。
+													支援實景拍攝、動畫製作與創意視覺呈現，提升影片品質與品牌專業度。
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="accordion-item border-bottom">
+										<h2 class="accordion-header" id="VE-flush-headingFour">
+											<button class="accordion-button collapsed" type="button"
+												data-bs-toggle="collapse" data-bs-target="#VE-flush-collapseFour"
+												aria-expanded="false" aria-controls="VE-flush-collapseFour">
+												<span>成</span>效追蹤優化內容
+											</button>
+										</h2>
+										<div id="VE-flush-collapseFour" class="accordion-collapse collapse"
+											aria-labelledby="VE-flush-headingFour"
+											data-bs-parent="#accordionFlushForVE">
+											<div class="accordion-body">
+												<span>
+													提供影片播映數據、點擊率、觀看秒數等數據分析，協助評估行銷成效。
+													透過數據進行為調整，優化腳本、剪輯與投放策略，持續提升轉換與用戶黏著度。
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Data Management Section -->
+		<section class="data-management-section mt-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-11 m-auto">
+						<header class="section-header">
+							<h3 class="text-center">會員與數據管理</h3>
+							<p class="text-center">Data Management</p>
+						</header>
+						<div class="section-container">
+							<div class="row">
+								<div class="col-12 d-block d-lg-none">
+									<section class="splide" aria-label="Splide Basic HTML Example">
+										<div class="splide__track">
+											<ul class="splide__list">
+												<li class="splide__slide">
+													<div class="data-item">
+														<div class="data-item__icon">
+															<img src="images/index/index-data-icon-01.svg" alt="JOYin"
+																class="img-fluid">
+															<h4>會員分級管理更靈活</h4>
+														</div>
+													</div>
+												</li>
+												<li class="splide__slide">
+													<div class="data-item">
+														<div class="data-item__icon">
+															<img src="images/index/index-data-icon-02.svg" alt="JOYin"
+																class="img-fluid">
+															<h4>行為資料即時回傳</h4>
+														</div>
+													</div>
+												</li>
+												<li class="splide__slide">
+													<div class="data-item">
+														<div class="data-item__icon">
+															<img src="images/index/index-data-icon-03.svg" alt="JOYin"
+																class="img-fluid">
+															<h4>精準優惠推播再行銷</h4>
+														</div>
+													</div>
+												</li>
+												<li class="splide__slide">
+													<div class="data-item">
+														<div class="data-item__icon">
+															<img src="images/index/index-data-icon-04.svg" alt="JOYin"
+																class="img-fluid">
+															<h4>積分兌換機制強化回購</h4>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</section>
+								</div>
+
+								<div class="col-3 d-none d-lg-block">
+									<div class="data-item">
+										<div class="data-item__icon">
+											<img src="images/index/index-data-icon-01.svg" alt="JOYin"
+												class="img-fluid">
+											<h4>會員分級<span class="d-lg-block d-xxl-none">管理更靈活</span></h4>
+										</div>
+										<div class="data-item__content">
+											<p>可依照會員消費金額、參與頻率或任務完成度設定等級，提供專屬優惠、兌換資格與回饋內容，強化用戶的品牌歸屬感與忠誠度。</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-3 d-none d-lg-block">
+									<div class="data-item">
+										<div class="data-item__icon">
+											<img src="images/index/index-data-icon-02.svg" alt="JOYin"
+												class="img-fluid">
+											<h4>行為資料<span class="d-lg-block d-xxl-none"></span>即時回傳</h4>
+										</div>
+										<div class="data-item__content">
+											<p>系統即時紀錄會員每筆交易、點擊行為與任務參與紀錄，幫助品牌即時掌握趨勢與消費動向，快速反應並調整行銷策略。</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-3 d-none d-lg-block">
+									<div class="data-item">
+										<div class="data-item__icon">
+											<img src="images/index/index-data-icon-03.svg" alt="JOYin"
+												class="img-fluid">
+											<h4>精準優惠<span class="d-lg-block d-xxl-none"></span>推播再行銷</h4>
+										</div>
+										<div class="data-item__content">
+											<p>透過會員行為資料進行標籤分類與偏好分析，自動推送個人化優惠訊息，提升開信率、點擊率與轉換率，有效再喚醒沉睡用戶。</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-3 d-none d-lg-block">
+									<div class="data-item">
+										<div class="data-item__icon">
+											<img src="images/index/index-data-icon-04.svg" alt="JOYin"
+												class="img-fluid">
+											<h4>積分兌換機制<span class="d-lg-block d-xxl-none"></span>強化回購</h4>
+										</div>
+										<div class="data-item__content">
+											<p>系統內建彈性積分模組，支援消費即累積、任務完成送點與活動加碼等機制，並可搭配商品兌換與優惠折抵，誘發重複消費動機。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Mission Game Section -->
+		<section class="mission-game-section mt-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-11 m-auto">
+						<header class="section-header">
+							<h3 class="text-center">任務遊戲與模擬互動</h3>
+							<p class="text-center">Mission Game</p>
+						</header>
+						<div class="section-container">
+							<div class="row">
+								<div class="col-12 col-md-6 col-lg-3">
+									<div class="mission-game-item">
+										<div class="mission-game-item__image">
+											<picture>
+												<img src="images/index/index-pic-06.webp" alt="JOYin" class="img-fluid">
+											</picture>
+											<div class="mission-game-item__image-overlay">
+												<h4>多元任務模組彈性高</h4>
+											</div>
+										</div>
+										<div class="mission-game-item__content">
+											<p>內建多款互動任務機組，如羅盤樂、轉轉樂、集章卡等，快速導入，免開發即可使用，適用各類促銷主題與品牌行銷活動。</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-6 col-lg-3">
+									<div class="mission-game-item">
+										<div class="mission-game-item__image">
+											<picture>
+												<img src="images/index/index-pic-07.webp" alt="JOYin" class="img-fluid">
+											</picture>
+											<div class="mission-game-item__image-overlay">
+												<h4>行為資料即時回傳</h4>
+											</div>
+										</div>
+										<div class="mission-game-item__content">
+											<p>系統即時紀錄會員每筆交易、點擊行為與任務參與紀錄，幫助品牌即時掌握趨勢與消費動向，快速反應並調整行銷策略。</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-6 col-lg-3">
+									<div class="mission-game-item">
+										<div class="mission-game-item__image">
+											<picture>
+												<img src="images/index/index-pic-08.webp" alt="JOYin" class="img-fluid">
+											</picture>
+											<div class="mission-game-item__image-overlay">
+												<h4>精準優惠推播再行銷</h4>
+											</div>
+										</div>
+										<div class="mission-game-item__content">
+											<p>透過會員行為資料進行標籤分類與偏好分析，自動推送個人化優惠訊息，提升開信率、點擊率與轉換率，有效再喚醒沉睡用戶。</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-6 col-lg-3">
+									<div class="mission-game-item">
+										<div class="mission-game-item__image">
+											<picture>
+												<img src="images/index/index-pic-06.webp" alt="JOYin" class="img-fluid">
+											</picture>
+											<div class="mission-game-item__image-overlay">
+												<h4>積分兌換機制強化回購</h4>
+											</div>
+										</div>
+										<div class="mission-game-item__content">
+											<p>系統內建彈性積分模組，支援消費即累積、任務完成送點與活動加碼等機制，並可搭配商品兌換與優惠折抵，誘發重複消費動機。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Store Discount Map Section -->
+		<section class="store-discount-map-section mt-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-11 m-auto">
+						<header class="section-header">
+							<h3 class="text-center d-none d-lg-inline-flex">即時推送附近優惠，打造在地消費循環</h3>
+							<h3 class="text-center d-lg-none">即時推送附近優惠</h3>
+							<h3 class="text-center d-lg-none">打造在地消費循環</h3>
+							<p class="text-center">Store discount map</p>
+						</header>
+						<div class="section-container">
+							<div class="row">
+								<div class="col-12 col-md-4">
+									<div class="store-discount-map-item">
+										<div class="store-discount-map-item__image">
+											<picture>
+												<img src="images/index/index-pic-09.webp" alt="JOYin" class="img-fluid">
+											</picture>
+											<div class="store-discount-map-item__image-overlay">
+												<h4>LBS定位推薦附近好康</h4>
+											</div>
+										</div>
+										<div class="store-discount-map-item__content">
+											<p>透過LBS定位技術，自動偵測使用者所在位置，即時推播鄰近店家的優惠資訊，強化區域性行銷效益，吸引周邊客群轉化為實際來店人潮。</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-4">
+									<div class="store-discount-map-item">
+										<div class="store-discount-map-item__image">
+											<picture>
+												<img src="images/index/index-pic-10.webp" alt="JOYin" class="img-fluid">
+											</picture>
+											<div class="store-discount-map-item__image-overlay">
+												<h4>資訊即時更新不中斷</h4>
+											</div>
+										</div>
+										<div class="store-discount-map-item__content">
+											<p>優惠內容由後台統一管理，可隨時新增、修改或下架活動資訊，確保消費者接收到的內容皆為最新版本，提升優惠使用率與信任感。</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-4">
+									<div class="store-discount-map-item">
+										<div class="store-discount-map-item__image">
+											<picture>
+												<img src="images/index/index-pic-11.webp" alt="JOYin" class="img-fluid">
+											</picture>
+											<div class="store-discount-map-item__image-overlay">
+												<h4>個人化推薦更精準</h4>
+											</div>
+										</div>
+										<div class="store-discount-map-item__content">
+											<p>系統可根據使用者歷史行為、偏好類型及常駐地點，自動推薦最相關的優惠資訊，提高點擊率與參與率，強化行銷投放效率。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+
+	<!-- Footer -->
+	<footer class="footer mt-5 py-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-11 m-auto">
+					<div class="row">
+						<div class="col-12 col-lg-4">
+							<div class="d-flex flex-column justify-content-between h-100">
+								<div>
+									<img src="images/joyin-logo.svg" alt="JOYin Logo" class="img-fluid">
+									<p class="mt-3">我們一起開創數位的未來<br>歡迎諮詢</p>
+								</div>
+
+								<span class="copyright d-none d-lg-block">
+									Joyin © 2025. All rights reserved.
+								</span>
+							</div>
+						</div>
+						<div class="col-12 col-lg-8 mt-3 mt-lg-0">
+							<div class="row">
+								<div class="col-6 col-lg-3">
+									<ul class="list-unstyled">
+										<li class="">
+											<a href="index.html">
+												首頁
+											</a>
+										</li>
+										<li>
+											<a href="about.html">
+												關於我們
+											</a>
+										</li>
+										<li>
+											<a href="coupon.html">
+												優惠券平台
+											</a>
+										</li>
+										<li>
+											<a href="lbs.html">
+												周邊好康
+											</a>
+										</li>
+										<li>
+											<a href="game.html">
+												任務遊戲
+											</a>
+										</li>
+										<li>
+											<a href="case.html">
+												成功案例
+											</a>
+										</li>
+										<li>
+											<a href="contact.html">
+												聯絡我們
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-6 col-lg-3">
+									<ul class="list-unstyled">
+										<li>
+											<a href="#">
+												隱私條款
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												服務條款
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												常見問題
+											</a>
+										</li>
+									</ul>
+								</div>
+
+								<div class="col-12 col-lg-6 mt-3 mt-lg-0">
+									<div class="contact-info d-flex flex-column justify-content-between h-100">
+										<h5 class="mb-3">聯絡我們</h5>
+										<p>
+											TEL:+886-937-773-381<br>
+											Mail:eva.chen@systex.com<br>
+											好康多據點：235台灣中和區連城路168-2號6樓<br>
+											週一至週五 9:00 AM – 6:00 PM<br>
+											週六、週日及國定假日休息<br>
+										</p>
+
+										<ul class="d-flex gap-3 list-unstyled">
+											<li class="social-link">
+												<a href="#">
+													<img src="images/joyin-fb-icon.svg" alt="Facebook Icon"
+														class="img-fluid">
+												</a>
+											</li>
+											<li class="social-link">
+												<a href="#">
+													<img src="images/joyin-ig-icon.svg" alt="Instagram Icon"
+														class="img-fluid">
+												</a>
+											</li>
+
+											<li class="social-link">
+												<a href="#">
+													<img src="images/joyin-yt-icon.svg" alt="Youtube Icon"
+														class="img-fluid">
+												</a>
+											</li>
+										</ul>
+
+										<span class="copyright d-block d-lg-none">
+											Joyin © 2025. All rights reserved.
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</footer>
+
+	<!-- Go Top Button -->
+	<button id="goTopBtn" class="go-top-btn" aria-label="回到頂部">
+		<img src="/images/joyin-gotop-icon.svg" alt="回到頂部">
+	</button>
+	<!-- Bootstrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Custom JS -->
+	<script type="module" src="/src/js/public.js"></script>
+	<script type="module" src="/src/js/index.js"></script>
+
+</body>
+
+</html>

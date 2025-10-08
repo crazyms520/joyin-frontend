@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Game - Joyin Frontend</title>
+
+	<!-- Bootstrap Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="/src/styles/page/game.scss">
+</head>
+
+<body>
+	<!-- Header -->
+	<header class="header">
+		<nav class="navbar navbar-expand-lg navbar-light bg-white">
+			<div class="container-fluid">
+				<div class="col-11 col-xl-9 m-auto">
+					<div class="row justify-content-between">
+						<div class="col-12 col-lg-2">
+							<div class="row justify-content-between align-items-center">
+								<!-- Logo -->
+								<div class="col-3 col-lg-12">
+									<a class="navbar-brand fw-bold text-primary" href="index.html">
+										<img src="images/joyin-logo.svg" alt="JOYin Logo" class="img-fluid">
+									</a>
+								</div>
+								<!-- Mobile Toggle Button -->
+								<div class="col-9 d-lg-none text-end">
+									<div class="d-flex justify-content-end align-items-center">
+										<div class="searchBox" id="searchBoxMobile">
+											<input class="searchInput" type="text" name="" placeholder="Search"
+												id="searchInputMobile">
+										<button class="searchButton" id="searchButtonMobile">
+											<img src="images/joyin-search-icon.svg" alt="JOYin Search Icon"
+												class="img-fluid img-icon">
+										</button>
+									</div>
+
+									<div class="personBox">
+										<a href="#" class="d-inline-flex">
+											<img src="images/joyin-person-icon.svg" alt="JOYin Person Icon"
+												class="img-fluid img-icon">
+										</a>
+									</div>
+
+									<div class="toggleBox">
+										<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+											data-bs-target="#navbarNav" aria-controls="navbarNav"
+											aria-expanded="false" aria-label="Toggle navigation">
+											<img src="images/joyin-menu-icon.svg" alt="JOYin Menu Icon"
+												class="img-fluid img-icon">
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-lg-10">
+							<!-- Navigation Menu -->
+							<div class="collapse navbar-collapse" id="navbarNav">
+								<ul class="navbar-nav ms-auto align-items-center">
+									<li class="nav-item">
+										<a class="nav-link" href="index.html">首頁</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="about.html">關於我們</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="coupon.html">優惠券平台</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="lbs.html">周邊好康</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link active" href="game.html">任務遊戲</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="case.html">成功案例</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="contact.html">聯絡我們</a>
+									</li>
+									<li class="nav-item mx-3 justify-content-end align-items-center d-none d-lg-flex">
+										<div class="searchBox" id="searchBox">
+										<input class="searchInput" type="text" name="" placeholder="Search"
+											id="searchInput">
+										<button class="searchButton" id="searchButton">
+											<img src="images/joyin-search-icon.svg" alt="JOYin Search Icon"
+												class="img-fluid img-icon">
+										</button>
+									</div>
+								</li>
+								<li class="nav-item d-none d-lg-flex">
+									<a href="#" class="d-inline-flex">
+										<img src="images/joyin-person-icon.svg" alt="JOYin Person Icon"
+											class="img-fluid img-icon">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<!-- Hero Banner Carousel -->
+		<section class="hero-section">
+			<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+				<!-- Carousel Inner -->
+				<div class="carousel-inner">
+					<!-- Slide 1 -->
+					<div class="carousel-item active">
+						<div class="carousel-bg position-relative">
+							<img src="/images/game/game-banner.webp" alt="Hero Image"
+								class="w-100 h-100 object-fit-cover">
+							<div class="carousel-overlay"></div>
+							<div
+								class="position-absolute top-0 start-0 w-100 h-100 p-0 d-flex align-items-center justify-content-center">
+								<div class="container">
+									<div class="col-11 m-auto">
+										<div class="row w-100 h-100 d-flex-row-reverse d-lg-row">
+											<div class="col-12 col-lg-6 p-0">
+												<div class="hero-content text-white">
+													<h1 class="display-4 fw-bold mb-3 carousel-item-title">
+														趣味互動行銷<br>讓活動參與變得更簡單</h1>
+													<p class="carousel-item-lead mb-0">任務模組 × 遊戲互動 × 抽獎刺激</p>
+												</div>
+											</div>
+											<div class="col-lg-6 p-0"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+
+		<!-- Why Choose Us Section -->
+		<section class="why-choose-section py-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-11 m-auto">
+						<header class="section-header">
+							<h2 class="text-center">JOYin 是您數位行銷的最佳夥伴</h2>
+							<p class="text-center">Why Choose us</p>
+							<ul class="text-center list-unstyled">
+								<li class="why-choose-item">
+									<p>支援轉轉樂、戳戳樂、節慶闖關等多種互動遊戲模組</p>
+								</li>
+								<li class="why-choose-item">
+									<p>可依據促銷主題快速部署，無需自行開發</p>
+								</li>
+								<li class="why-choose-item">
+									<p>操作流程直覺，適合線上與線下各種活動搭配使用，提升活動趣味與參與動力</p>
+								</li>
+							</ul>
+						</header>
+						<div class="section-container mt-5">
+							<div class="row position-relative">
+								<div class="col-11 m-auto">
+									<section class="splide splide-game" aria-label="Splide Team Introduction HTML">
+										<div class="splide__track">
+											<ul class="splide__list">
+												<li class="splide__slide">
+													<div class="team-item">
+														<div class="team-item__card">
+															<div class="card bg-white ">
+																<picture class="d-inline-block">
+																	<img src="/images/game/game-phone-01.webp"
+																		class="card-img-top img-fluid" alt="...">
+																</picture>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li class="splide__slide">
+													<div class="team-item">
+														<div class="team-item__card">
+															<div class="card bg-white">
+																<picture class="d-inline-block">
+																	<img src="/images/game/game-phone-02.webp"
+																		class="card-img-top img-fluid" alt="...">
+																</picture>
+															</div>
+														</div>
+													</div>
+												</li>
+
+												<li class="splide__slide">
+													<div class="team-item">
+														<div class="team-item__card">
+															<div class="card bg-white">
+																<picture class="d-inline-block">
+																	<img src="/images/game/game-phone-03.webp"
+																		class="card-img-top img-fluid" alt="...">
+																</picture>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</section>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+
+		<!-- info Section -->
+		<section class="info-section mt-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-11 m-auto">
+						<div class="section-container">
+							<div class="info-row">
+								<div class="row justify-content-between">
+									<div class="col-12 col-lg-6">
+										<div class="info-image">
+											<picture class="ratio ratio-16x9">
+												<img src="/images/game/game-pic-01.webp" alt="JOYin"
+													class="img-fluid">
+											</picture>
+										</div>
+									</div>
+									<div class="col-12 col-lg-6">
+										<div class="info-content">
+											<h3>互動行為數據一手掌握</h3>
+											<sapn>Data Tracking</sapn>
+											<p>每場任務活動都可追蹤參與人數、點擊率、中獎率與任務完成情況， 後台即時回傳報表，協助品牌優化遊戲機制與獎項配置，提升整體行銷效益。</p>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="info-row mt-3 mt-lg-5">
+								<div class="row justify-content-between">
+									<div class="col-12 col-lg-6">
+										<div class="info-image">
+											<picture class="ratio ratio-16x9">
+												<img src="/images/game/game-pic-02.webp" alt="JOYin"
+													class="img-fluid">
+											</picture>
+										</div>
+									</div>
+									<div class="col-12 col-lg-6">
+										<div class="info-content d-flex flex-column justify-content-center h-100">
+											<h3>抽獎機制＋獎勵設計<br/>帶動行動轉換</h3>
+											<sapn>the Activity</sapn>
+											<p>可依據活動目標設計點數、抽獎次數、即時獎品兌換等獎勵規則，刺激用戶完成任務。結合會員系統還可導入消費回饋與再行銷誘因，強化活動後的留客與回購行為。</p>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+
+	<!-- Footer -->
+	<footer class="footer mt-5 py-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-11 m-auto">
+					<div class="row">
+						<div class="col-12 col-lg-4">
+							<div class="d-flex flex-column justify-content-between h-100">
+								<div>
+									<img src="images/joyin-logo.svg" alt="JOYin Logo" class="img-fluid">
+									<p class="mt-3">我們一起開創數位的未來<br>歡迎諮詢</p>
+								</div>
+
+								<span class="copyright d-none d-lg-block">
+									Joyin © 2025. All rights reserved.
+								</span>
+							</div>
+						</div>
+						<div class="col-12 col-lg-8 mt-3 mt-lg-0">
+							<div class="row">
+								<div class="col-6 col-lg-3">
+									<ul class="list-unstyled">
+										<li class="">
+											<a href="index.html">
+												首頁
+											</a>
+										</li>
+										<li>
+											<a href="about.html">
+												關於我們
+											</a>
+										</li>
+										<li>
+											<a href="coupon.html">
+												優惠券平台
+											</a>
+										</li>
+										<li>
+											<a href="lbs.html">
+												周邊好康
+											</a>
+										</li>
+										<li>
+											<a href="game.html">
+												任務遊戲
+											</a>
+										</li>
+										<li>
+											<a href="case.html">
+												成功案例
+											</a>
+										</li>
+										<li>
+											<a href="contact.html">
+												聯絡我們
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-6 col-lg-3">
+									<ul class="list-unstyled">
+										<li>
+											<a href="#">
+												隱私條款
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												服務條款
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												常見問題
+											</a>
+										</li>
+									</ul>
+								</div>
+
+								<div class="col-12 col-lg-6 mt-3 mt-lg-0">
+									<div class="contact-info d-flex flex-column justify-content-between h-100">
+										<h5 class="mb-3">聯絡我們</h5>
+										<p>
+											TEL:+886-937-773-381<br>
+											Mail:eva.chen@systex.com<br>
+											好康多據點：235台灣中和區連城路168-2號6樓<br>
+											週一至週五 9:00 AM – 6:00 PM<br>
+											週六、週日及國定假日休息<br>
+										</p>
+									<ul class="d-flex gap-3 list-unstyled">
+										<li class="social-link">
+											<a href="#">
+												<img src="images/joyin-fb-icon.svg" alt="Facebook Icon"
+													class="img-fluid">
+											</a>
+										</li>
+										<li class="social-link">
+											<a href="#">
+												<img src="images/joyin-ig-icon.svg" alt="Instagram Icon"
+													class="img-fluid">
+											</a>
+										</li>
+
+										<li class="social-link">
+											<a href="#">
+												<img src="images/joyin-yt-icon.svg" alt="Youtube Icon"
+													class="img-fluid">
+											</a>
+										</li>
+									</ul>
+
+										<span class="copyright d-block d-lg-none">
+											Joyin © 2025. All rights reserved.
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</footer>
+
+	<!-- Go Top Button -->
+	<button id="goTopBtn" class="go-top-btn" aria-label="回到頂部">
+		<img src="/images/joyin-gotop-icon.svg" alt="回到頂部">
+	</button>
+
+	<!-- Bootstrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Custom JS -->
+	<script type="module" src="/src/js/public.js"></script>
+	<script type="module" src="/src/js/game.js"></script>
+
+</body>
+
+</html>
