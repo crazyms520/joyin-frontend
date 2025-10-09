@@ -8,11 +8,13 @@
 
 	<!-- Bootstrap Icons -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+	<!-- Swiper CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 	<!-- Custom CSS -->
-  <script type="module" crossorigin src="./assets/js/lbs.Dpf5rLFC.js"></script>
+  <script type="module" crossorigin src="./assets/js/lbs.MDbbmLYm.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/js/public.BRxk827P.js">
   <link rel="modulepreload" crossorigin href="./assets/js/splide.esm.BMadpM89.js">
-  <link rel="stylesheet" crossorigin href="./assets/css/lbs.D6bQy4EB.css">
+  <link rel="stylesheet" crossorigin href="./assets/css/lbs.Cd1SF-mO.css">
 </head>
 
 <body>
@@ -152,45 +154,1132 @@
 		<section class="location-services-info-section mt-5">
 			<div class="container">
 				<div class="row">
-					<div class="col-11 m-auto">
+					<div class="col-12 col-lg-11 m-auto">
 						<header class="section-header">
 							<h2 class="text-center">LBS 定位服務</h2>
 							<p class="text-center">Location Services</p>
 						</header>
 						<div class="section-container">
-							<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-								<li class="nav-item" role="presentation">
-									<button class="nav-link active" id="pills-shopping-tab" data-bs-toggle="pill"
-										data-bs-target="#pills-shopping" type="button" role="tab"
-										aria-controls="pills-shopping" aria-selected="true">購物</button>
-								</li>
-								<li class="nav-item" role="presentation">
-									<button class="nav-link" id="pills-restaurant-tab" data-bs-toggle="pill"
-										data-bs-target="#pills-restaurant" type="button" role="tab"
-										aria-controls="pills-restaurant" aria-selected="false">餐飲</button>
-								</li>
-								<li class="nav-item" role="presentation">
-									<button class="nav-link" id="pills-life-tab" data-bs-toggle="pill"
-										data-bs-target="#pills-life" type="button" role="tab" aria-controls="pills-life"
-										aria-selected="false">生活</button>
-								</li>
-								<li class="nav-item" role="presentation">
-									<button class="nav-link" id="pills-pet-tab" data-bs-toggle="pill"
-										data-bs-target="#pills-pet" type="button" role="tab" aria-controls="pills-pet"
-										aria-selected="false">寵物</button>
-								</li>
-							</ul>
-							<div class="tab-content" id="pills-tabContent">
-								<div class="tab-pane fade show active" id="pills-shopping" role="tabpanel"
-									aria-labelledby="pills-shopping-tab">
+							<!-- tab nav bar -->
+							<div class="row">
+								<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+									<li class="nav-item" role="presentation">
+										<button class="nav-link active" id="pills-shopping-tab" data-bs-toggle="pill"
+											data-bs-target="#pills-shopping" type="button" role="tab"
+											aria-controls="pills-shopping" aria-selected="true">購物</button>
+									</li>
+									<li class="nav-item" role="presentation">
+										<button class="nav-link" id="pills-restaurant-tab" data-bs-toggle="pill"
+											data-bs-target="#pills-restaurant" type="button" role="tab"
+											aria-controls="pills-restaurant" aria-selected="false">餐飲</button>
+									</li>
+									<li class="nav-item" role="presentation">
+										<button class="nav-link" id="pills-life-tab" data-bs-toggle="pill"
+											data-bs-target="#pills-life" type="button" role="tab"
+											aria-controls="pills-life" aria-selected="false">生活</button>
+									</li>
+									<li class="nav-item" role="presentation">
+										<button class="nav-link" id="pills-pet-tab" data-bs-toggle="pill"
+											data-bs-target="#pills-pet" type="button" role="tab"
+											aria-controls="pills-pet" aria-selected="false">寵物</button>
+									</li>
+								</ul>
+								<div class="tab-content" id="pills-tabContent">
+									<div class="tab-pane fade show active" id="pills-shopping" role="tabpanel"
+										aria-labelledby="pills-shopping-tab">
 
+										<!-- 購物輪播 -->
+										<div class="swiper swiper-shopping">
+											<div class="swiper-wrapper">
+												<!-- 第1頁：前12個商家 -->
+												<div class="swiper-slide">
+													<div class="shopping-grid-container">
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo01.png" alt="漢堡王 中和店"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">漢堡王 中和店</h5>
+																<p class="merchant-offer">小華堡雙人餐優惠$168</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.2 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo03.png" alt="麥當勞 中和餐廳"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">麥當勞 中和餐廳</h5>
+																<p class="merchant-offer">大薯買一送一優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.2 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo04.png" alt="Oh my!原燒 中和中山店"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">Oh my!原燒 中和中山店</h5>
+																<p class="merchant-offer">內用及外帶優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.2 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo05.png" alt="勝博殿 Express 中和環球店"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">勝博殿 Express 中和環球店</h5>
+																<p class="merchant-offer">來店消費套餐贈藤內肉乙份</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.2 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo06.png" alt="火鍋·樂活"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">樂活火鍋 中和門市</h5>
+																<p class="merchant-offer">特定商品9折優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.2 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo07.png" alt="爭鮮 中和鬧發店"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">爭鮮 中和大鬧發店</h5>
+																<p class="merchant-offer">特定商品9折優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.2 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo01.png" alt="饗食天堂 新北板橋店"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">饗食天堂 新北板橋店</h5>
+																<p class="merchant-offer">特定商品9折優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.2 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo03.png" alt="白木屋 板橋店"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">白木屋 板橋店</h5>
+																<p class="merchant-offer">特定商品9折優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.2 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo04.png" alt="漢堡王 板橋店"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">漢堡王 板橋店</h5>
+																<p class="merchant-offer">套餐優惠85折</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.2 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo05.png" alt="Oh my!原燒"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">Oh my!原燒</h5>
+																<p class="merchant-offer">內用優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.2 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo06.png" alt="香草集"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">香草集</h5>
+																<p class="merchant-offer">全品項9折</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.2 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo07.png" alt="皇家烘培"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">皇家烘培</h5>
+																<p class="merchant-offer">滿300送50</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.2 km
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<!-- 第2頁：後12個商家 -->
+												<div class="swiper-slide">
+													<div class="shopping-grid-container">
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo01.png" alt="商家13"
+																class="img-fluid">
+														</div>
+														<div class="merchant-content">
+															<h5 class="merchant-name">美食商家</h5>
+															<p class="merchant-offer">優惠活動</p>
+														</div>
+														<div class="merchant-distance">
+															<i class="bi bi-geo-alt-fill"></i>1.2 km
+														</div>
+													</div>
+													<div class="merchant-card">
+														<div class="merchant-logo">
+															<img src="./images/lbs/logo03.png" alt="商家14"
+																class="img-fluid">
+														</div>
+														<div class="merchant-content">
+															<h5 class="merchant-name">美食商家 14</h5>
+															<p class="merchant-offer">優惠活動</p>
+														</div>
+														<div class="merchant-distance">
+															<i class="bi bi-geo-alt-fill"></i>1.2 km
+														</div>
+													</div>
+													<div class="merchant-card">
+														<div class="merchant-logo">
+															<img src="./images/lbs/logo04.png" alt="商家15"
+																class="img-fluid">
+														</div>
+														<div class="merchant-content">
+															<h5 class="merchant-name">美食商家 15</h5>
+															<p class="merchant-offer">優惠活動</p>
+														</div>
+														<div class="merchant-distance">
+															<i class="bi bi-geo-alt-fill"></i>1.2 km
+														</div>
+													</div>
+													<div class="merchant-card">
+														<div class="merchant-logo">
+															<img src="./images/lbs/logo05.png" alt="商家16"
+																class="img-fluid">
+														</div>
+														<div class="merchant-content">
+															<h5 class="merchant-name">美食商家 16</h5>
+															<p class="merchant-offer">優惠活動</p>
+														</div>
+														<div class="merchant-distance">
+															<i class="bi bi-geo-alt-fill"></i>1.2 km
+														</div>
+													</div>
+													<div class="merchant-card">
+														<div class="merchant-logo">
+															<img src="./images/lbs/logo06.png" alt="商家17"
+																class="img-fluid">
+														</div>
+														<div class="merchant-content">
+															<h5 class="merchant-name">美食商家 17</h5>
+															<p class="merchant-offer">優惠活動</p>
+														</div>
+														<div class="merchant-distance">
+															<i class="bi bi-geo-alt-fill"></i>1.2 km
+														</div>
+													</div>
+													<div class="merchant-card">
+														<div class="merchant-logo">
+															<img src="./images/lbs/logo07.png" alt="商家18"
+																class="img-fluid">
+														</div>
+														<div class="merchant-content">
+															<h5 class="merchant-name">美食商家 18</h5>
+															<p class="merchant-offer">優惠活動</p>
+														</div>
+														<div class="merchant-distance">
+															<i class="bi bi-geo-alt-fill"></i>1.2 km
+														</div>
+													</div>
+													<div class="merchant-card">
+														<div class="merchant-logo">
+															<img src="./images/lbs/logo01.png" alt="商家19"
+																class="img-fluid">
+														</div>
+														<div class="merchant-content">
+															<h5 class="merchant-name">美食商家 19</h5>
+															<p class="merchant-offer">優惠活動</p>
+														</div>
+														<div class="merchant-distance">
+															<i class="bi bi-geo-alt-fill"></i>1.2 km
+														</div>
+													</div>
+													<div class="merchant-card">
+														<div class="merchant-logo">
+															<img src="./images/lbs/logo03.png" alt="商家20"
+																class="img-fluid">
+														</div>
+														<div class="merchant-content">
+															<h5 class="merchant-name">美食商家 20</h5>
+															<p class="merchant-offer">優惠活動</p>
+														</div>
+														<div class="merchant-distance">
+															<i class="bi bi-geo-alt-fill"></i>1.2 km
+														</div>
+													</div>
+													<div class="merchant-card">
+														<div class="merchant-logo">
+															<img src="./images/lbs/logo04.png" alt="商家21"
+																class="img-fluid">
+														</div>
+														<div class="merchant-content">
+															<h5 class="merchant-name">美食商家 21</h5>
+															<p class="merchant-offer">優惠活動</p>
+														</div>
+														<div class="merchant-distance">
+															<i class="bi bi-geo-alt-fill"></i>1.2 km
+														</div>
+													</div>
+													<div class="merchant-card">
+														<div class="merchant-logo">
+															<img src="./images/lbs/logo05.png" alt="商家22"
+																class="img-fluid">
+														</div>
+														<div class="merchant-content">
+															<h5 class="merchant-name">美食商家 22</h5>
+															<p class="merchant-offer">優惠活動</p>
+														</div>
+														<div class="merchant-distance">
+															<i class="bi bi-geo-alt-fill"></i>1.2 km
+														</div>
+													</div>
+													<div class="merchant-card">
+														<div class="merchant-logo">
+															<img src="./images/lbs/logo06.png" alt="商家23"
+																class="img-fluid">
+														</div>
+														<div class="merchant-content">
+															<h5 class="merchant-name">美食商家 23</h5>
+															<p class="merchant-offer">優惠活動</p>
+														</div>
+														<div class="merchant-distance">
+															<i class="bi bi-geo-alt-fill"></i>1.2 km
+														</div>
+													</div>
+													<div class="merchant-card">
+														<div class="merchant-logo">
+															<img src="./images/lbs/logo07.png" alt="商家24"
+																class="img-fluid">
+														</div>
+														<div class="merchant-content">
+															<h5 class="merchant-name">美食商家 24</h5>
+															<p class="merchant-offer">優惠活動</p>
+														</div>
+														<div class="merchant-distance">
+															<i class="bi bi-geo-alt-fill"></i>1.2 km
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- 分頁指示器 -->
+											<div class="swiper-pagination"></div>
+										</div>
+
+									</div>
+									<div class="tab-pane fade" id="pills-restaurant" role="tabpanel"
+										aria-labelledby="pills-restaurant-tab">
+
+										<!-- 餐飲輪播 -->
+										<div class="swiper swiper-restaurant">
+											<div class="swiper-wrapper">
+												<!-- 第1頁：前12個商家 -->
+												<div class="swiper-slide">
+													<div class="restaurant-grid-container">
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo01.png" alt="餐廳1"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">餐飲商家 1</h5>
+																<p class="merchant-offer">美食優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>0.8 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo03.png" alt="餐廳2"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">餐飲商家 2</h5>
+																<p class="merchant-offer">美食優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.0 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo04.png" alt="餐廳3"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">餐飲商家 3</h5>
+																<p class="merchant-offer">美食優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.5 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo05.png" alt="餐廳4"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">餐飲商家 4</h5>
+																<p class="merchant-offer">美食優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.2 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo06.png" alt="餐廳5"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">餐飲商家 5</h5>
+																<p class="merchant-offer">美食優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>0.9 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo07.png" alt="餐廳6"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">餐飲商家 6</h5>
+																<p class="merchant-offer">美食優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.3 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo01.png" alt="餐廳7"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">餐飲商家 7</h5>
+																<p class="merchant-offer">美食優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.1 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo03.png" alt="餐廳8"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">餐飲商家 8</h5>
+																<p class="merchant-offer">美食優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>0.7 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo04.png" alt="餐廳9"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">餐飲商家 9</h5>
+																<p class="merchant-offer">美食優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.4 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo05.png" alt="餐廳10"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">餐飲商家 10</h5>
+																<p class="merchant-offer">美食優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.2 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo06.png" alt="餐廳11"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">餐飲商家 11</h5>
+																<p class="merchant-offer">美食優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>0.8 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo07.png" alt="餐廳12"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">餐飲商家 12</h5>
+																<p class="merchant-offer">美食優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.0 km
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<!-- 第2頁：後12個商家 -->
+												<div class="swiper-slide">
+													<div class="restaurant-grid-container">
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo01.png" alt="餐廳13"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">餐飲商家 13</h5>
+																<p class="merchant-offer">美食優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>0.8 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo03.png" alt="餐廳14"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">餐飲商家 14</h5>
+																<p class="merchant-offer">美食優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.0 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo04.png" alt="餐廳15"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">餐飲商家 15</h5>
+																<p class="merchant-offer">美食優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.2 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo05.png" alt="餐廳16"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">餐飲商家 16</h5>
+																<p class="merchant-offer">美食優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>0.8 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo06.png" alt="餐廳17"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">餐飲商家 17</h5>
+																<p class="merchant-offer">美食優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>0.8 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo07.png" alt="餐廳18"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">餐飲商家 18</h5>
+																<p class="merchant-offer">美食優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>0.8 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo01.png" alt="餐廳19"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">餐飲商家 19</h5>
+																<p class="merchant-offer">美食優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>0.8 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo03.png" alt="餐廳20"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">餐飲商家 20</h5>
+																<p class="merchant-offer">美食優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>0.8 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo04.png" alt="餐廳21"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">餐飲商家 21</h5>
+																<p class="merchant-offer">美食優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>0.8 km
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<!-- 分頁指示器 -->
+											<div class="swiper-pagination"></div>
+										</div>
+
+									</div>
+									<div class="tab-pane fade" id="pills-life" role="tabpanel"
+										aria-labelledby="pills-life-tab">
+
+										<!-- 生活輪播 -->
+										<div class="swiper swiper-life">
+											<div class="swiper-wrapper">
+												<!-- 第1頁：前12個商家 -->
+												<div class="swiper-slide">
+													<div class="life-grid-container">
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo01.png" alt="生活1"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">生活商家 1</h5>
+																<p class="merchant-offer">生活優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>0.5 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo03.png" alt="生活2"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">生活商家 2</h5>
+																<p class="merchant-offer">生活優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>0.9 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo04.png" alt="生活3"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">生活商家 3</h5>
+																<p class="merchant-offer">生活優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.2 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo05.png" alt="生活4"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">生活商家 4</h5>
+																<p class="merchant-offer">生活優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>0.8 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo06.png" alt="生活5"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">生活商家 5</h5>
+																<p class="merchant-offer">生活優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.1 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo07.png" alt="生活6"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">生活商家 6</h5>
+																<p class="merchant-offer">生活優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>0.7 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo01.png" alt="生活7"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">生活商家 7</h5>
+																<p class="merchant-offer">生活優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.3 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo03.png" alt="生活8"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">生活商家 8</h5>
+																<p class="merchant-offer">生活優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>0.6 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo04.png" alt="生活9"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">生活商家 9</h5>
+																<p class="merchant-offer">生活優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.0 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo05.png" alt="生活10"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">生活商家 10</h5>
+																<p class="merchant-offer">生活優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.4 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo06.png" alt="生活11"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">生活商家 11</h5>
+																<p class="merchant-offer">生活優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>0.9 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo07.png" alt="生活12"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">生活商家 12</h5>
+																<p class="merchant-offer">生活優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.2 km
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<!-- 分頁指示器 -->
+											<div class="swiper-pagination"></div>
+										</div>
+
+									</div>
+									<div class="tab-pane fade" id="pills-pet" role="tabpanel"
+										aria-labelledby="pills-pet-tab">
+
+										<!-- 寵物輪播 -->
+										<div class="swiper swiper-pet">
+											<div class="swiper-wrapper">
+												<!-- 第1頁：前12個商家 -->
+												<div class="swiper-slide">
+													<div class="pet-grid-container">
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo01.png" alt="寵物1"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">寵物商家 1</h5>
+																<p class="merchant-offer">寵物優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>0.6 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo03.png" alt="寵物2"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">寵物商家 2</h5>
+																<p class="merchant-offer">寵物優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.1 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo04.png" alt="寵物3"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">寵物商家 3</h5>
+																<p class="merchant-offer">寵物優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>0.9 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo05.png" alt="寵物4"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">寵物商家 4</h5>
+																<p class="merchant-offer">寵物優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.3 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo06.png" alt="寵物5"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">寵物商家 5</h5>
+																<p class="merchant-offer">寵物優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>0.7 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo07.png" alt="寵物6"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">寵物商家 6</h5>
+																<p class="merchant-offer">寵物優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.0 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo01.png" alt="寵物7"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">寵物商家 7</h5>
+																<p class="merchant-offer">寵物優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.4 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo03.png" alt="寵物8"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">寵物商家 8</h5>
+																<p class="merchant-offer">寵物優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>0.8 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo04.png" alt="寵物9"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">寵物商家 9</h5>
+																<p class="merchant-offer">寵物優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.2 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo05.png" alt="寵物10"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">寵物商家 10</h5>
+																<p class="merchant-offer">寵物優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>0.9 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo06.png" alt="寵物11"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">寵物商家 11</h5>
+																<p class="merchant-offer">寵物優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.1 km
+															</div>
+														</div>
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo07.png" alt="寵物12"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">寵物商家 12</h5>
+																<p class="merchant-offer">寵物優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.3 km
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<!-- 第2頁：第13個商家 -->
+												<div class="swiper-slide">
+													<div class="pet-grid-container">
+														<div class="merchant-card">
+															<div class="merchant-logo">
+																<img src="./images/lbs/logo07.png" alt="寵物13"
+																	class="img-fluid">
+															</div>
+															<div class="merchant-content">
+																<h5 class="merchant-name">寵物商家 13</h5>
+																<p class="merchant-offer">寵物優惠</p>
+															</div>
+															<div class="merchant-distance">
+																<i class="bi bi-geo-alt-fill"></i>1.3 km
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<!-- 分頁指示器 -->
+											<div class="swiper-pagination"></div>
+										</div>
+
+									</div>
 								</div>
-								<div class="tab-pane fade" id="pills-restaurant" role="tabpanel"
-									aria-labelledby="pills-restaurant-tab">...</div>
-								<div class="tab-pane fade" id="pills-life" role="tabpanel"
-									aria-labelledby="pills-life-tab">...</div>
-								<div class="tab-pane fade" id="pills-pet" role="tabpanel"
-									aria-labelledby="pills-pet-tab">...</div>
+							</div>
+
+							<div class="row">
+								<!-- 垂直輪播 -->
+								<div class="col-12">
+									<div class="swiper swiper-phone">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="row flex-column-reverse flex-lg-row">
+													<div class="col-12 col-lg-6">
+														<div class="phone-image-item position-relative">
+															<div class="phone-image-overlay"></div>
+															<picture class="d-inline-block text-center">
+																<img src="./images/lbs/lbs-phone.webp" alt="手機展示"
+																	class="img-fluid">
+															</picture>
+														</div>
+													</div>
+													<div class="col-12 col-lg-6">
+														<div class="phone-text-item">
+															<h3 class="phone-text-title">開放API整合<br>讓好康資訊遍佈每個觸點</h3>
+															<span
+																class="phone-text-label">1.系統支援與自家APP、品牌官網或合作平台快速串接</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="row flex-column-reverse flex-lg-row">
+													<div class="col-12 col-lg-6">
+														<div class="phone-image-item position-relative">
+															<div class="phone-image-overlay"></div>
+															<picture class="d-inline-block text-center">
+																<img src="./images/lbs/lbs-phone.webp" alt="手機展示"
+																	class="img-fluid">
+															</picture>
+														</div>
+													</div>
+													<div class="col-12 col-lg-6">
+														<div class="phone-text-item">
+															<h3 class="phone-text-title">開放API整合<br>讓好康資訊遍佈每個觸點2</h3>
+															<span
+																class="phone-text-label">1.系統支援與自家APP、品牌官網或合作平台快速串接</span>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="swiper-slide">
+												<div class="row flex-column-reverse flex-lg-row">
+													<div class="col-12 col-lg-6">
+														<div class="phone-image-item position-relative">
+															<div class="phone-image-overlay"></div>
+															<picture class="d-inline-block text-center">
+																<img src="./images/lbs/lbs-phone.webp" alt="手機展示"
+																	class="img-fluid">
+															</picture>
+														</div>
+													</div>
+													<div class="col-12 col-lg-6">
+														<div class="phone-text-item">
+															<h3 class="phone-text-title">開放API整合<br>讓好康資訊遍佈每個觸點3</h3>
+															<span
+																class="phone-text-label">1.系統支援與自家APP、品牌官網或合作平台快速串接</span>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="swiper-slide">
+												<div class="row flex-column-reverse flex-lg-row">
+													<div class="col-12 col-lg-6">
+														<div class="phone-image-item position-relative">
+															<div class="phone-image-overlay"></div>
+															<picture class="d-inline-block text-center">
+																<img src="./images/lbs/lbs-phone.webp" alt="手機展示"
+																	class="img-fluid">
+															</picture>
+														</div>
+													</div>
+													<div class="col-12 col-lg-6">
+														<div class="phone-text-item">
+															<h3 class="phone-text-title">開放API整合<br>讓好康資訊遍佈每個觸點2</h3>
+															<span
+																class="phone-text-label">1.系統支援與自家APP、品牌官網或合作平台快速串接</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- 分頁指示器 -->
+										<div class="swiper-pagination"></div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -408,6 +1497,9 @@
 
 	<!-- Bootstrap JS -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Swiper JS -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 	<!-- Custom JS -->
 
