@@ -1,1 +1,0 @@
-import"./public.BPuK486R.js";document.addEventListener(`DOMContentLoaded`,function(){new Swiper(`.mySwiper`,{slidesPerView:1,spaceBetween:30,direction:`vertical`,mousewheel:!0,pagination:{el:`.swiper-pagination`,clickable:!0}})});
