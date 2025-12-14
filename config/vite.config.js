@@ -4,7 +4,138 @@
  * 執行命令：npm run dev, npm run build
  */
 import { defineConfig } from 'vite'
-import { resolve } from 'path'
+import { resolve, join } from 'path'
+import { readFileSync, writeFileSync, readdirSync, statSync } from 'fs'
+
+// 處理 CSS 文件中圖片路徑的插件
+// 將路徑 "../images/" 轉換為相對路徑 "../../images/"
+function fixCssImagePaths() {
+  return {
+    name: 'fix-css-image-paths',
+    writeBundle() {
+      // #region agent log
+      try {
+        const logPath = resolve(__dirname, '../.cursor/debug.log')
+        const logEntry = JSON.stringify({
+          location: 'vite.config.js:writeBundle',
+          message: 'writeBundle hook called',
+          data: { outDir: '../dist' },
+          timestamp: Date.now(),
+          sessionId: 'debug-session',
+          runId: 'build',
+          hypothesisId: 'F'
+        }) + '\n'
+        require('fs').appendFileSync(logPath, logEntry, 'utf8')
+      } catch (e) {}
+      // #endregion
+      
+      // 構建完成後，處理所有 CSS 文件
+      const distPath = resolve(__dirname, '../dist')
+      const cssDir = join(distPath, 'assets', 'css')
+      let cssFiles = []
+      
+      try {
+        const files = readdirSync(cssDir)
+        cssFiles = files
+          .filter(file => file.endsWith('.css'))
+          .map(file => join(cssDir, file))
+      } catch (error) {
+        console.warn('無法讀取 CSS 目錄:', error)
+      }
+      
+      // #region agent log
+      try {
+        const logPath = resolve(__dirname, '../.cursor/debug.log')
+        const logEntry = JSON.stringify({
+          location: 'vite.config.js:writeBundle',
+          message: 'Found CSS files',
+          data: { count: cssFiles.length, files: cssFiles.map(f => f.replace(distPath, '')) },
+          timestamp: Date.now(),
+          sessionId: 'debug-session',
+          runId: 'build',
+          hypothesisId: 'F'
+        }) + '\n'
+        require('fs').appendFileSync(logPath, logEntry, 'utf8')
+      } catch (e) {}
+      // #endregion
+      
+      cssFiles.forEach(cssFile => {
+        try {
+          let content = readFileSync(cssFile, 'utf8')
+          const originalContent = content
+          
+          // 匹配 url("../images/ 或 url('../images/ 或 url(../images/
+          content = content.replace(/url\((["']?)\.\.\/images\//g, 'url($1../../images/')
+          
+          if (content !== originalContent) {
+            writeFileSync(cssFile, content, 'utf8')
+            // #region agent log
+            try {
+              const logPath = resolve(__dirname, '../.cursor/debug.log')
+              const logEntry = JSON.stringify({
+                location: 'vite.config.js:writeBundle',
+                message: 'Fixed CSS image paths',
+                data: { file: cssFile.replace(distPath, '') },
+                timestamp: Date.now(),
+                sessionId: 'debug-session',
+                runId: 'build',
+                hypothesisId: 'F'
+              }) + '\n'
+              require('fs').appendFileSync(logPath, logEntry, 'utf8')
+            } catch (e) {}
+            // #endregion
+          }
+        } catch (error) {
+          console.error(`處理 CSS 文件失敗: ${cssFile}`, error)
+        }
+      })
+    }
+  }
+}
+
+// 處理 html 文件中css 與 js路徑的插件
+// 將路徑 "./assets/css" 轉換為相對路徑 "assets/css"
+// 將路徑 "./assets/js" 轉換為相對路徑 "assets/js"
+function fixHtmlCssJsPaths() {
+  return {
+    name: 'fix-html-css-js-paths',
+    writeBundle() {
+      // 構建完成後，處理所有 HTML 文件
+      const distPath = resolve(__dirname, '../dist')
+      let htmlFiles = []
+      
+      try {
+        const files = readdirSync(distPath)
+        htmlFiles = files
+          .filter(file => file.endsWith('.html'))
+          .map(file => join(distPath, file))
+      } catch (error) {
+        console.warn('無法讀取 dist 目錄:', error)
+      }
+      
+      htmlFiles.forEach(htmlFile => {
+        try {
+          let content = readFileSync(htmlFile, 'utf8')
+          const originalContent = content
+          
+          // 將 "./assets/css" 轉換為 "assets/css"
+          content = content.replace(/\.\/assets\/css/g, 'assets/css')
+          // 將 "./assets/js" 轉換為 "assets/js"
+          content = content.replace(/\.\/assets\/js/g, 'assets/js')
+          // 將 "./images/" 轉換為 "images/"
+          content = content.replace(/\.\/images\//g, 'images/')
+          
+          if (content !== originalContent) {
+            writeFileSync(htmlFile, content, 'utf8')
+            console.log(`已修正 HTML 檔案中的資源路徑: ${htmlFile.replace(distPath, '')}`)
+          }
+        } catch (error) {
+          console.error(`處理 HTML 文件失敗: ${htmlFile}`, error)
+        }
+      })
+    }
+  }
+}
 
 export default defineConfig({
   // ===========================================
@@ -17,6 +148,14 @@ export default defineConfig({
   // ===========================================
   root: 'views', // 設定專案根目錄為 views 資料夾，讓網址可以直接使用 xxx.html
   publicDir: resolve(__dirname, '../public'), // 設定 public 目錄
+
+  // ===========================================
+  // 插件配置
+  // ===========================================
+  plugins: [
+    fixCssImagePaths(),  // 修正 CSS 文件中的圖片路徑
+    fixHtmlCssJsPaths()  // 修正 html 文件中css 與 js路徑
+  ],
 
   // ===========================================
   // 路徑解析設定
@@ -59,16 +198,16 @@ export default defineConfig({
         assetFileNames: (assetInfo) => {
           const ext = assetInfo.name?.split('.').pop()
           if (ext === 'css') {
-            return 'assets/css/[name].[hash][extname]'  // CSS 檔案放在 assets/css/
+            return 'assets/css/[name][extname]'  // CSS 檔案放在 assets/css/（不使用 hash）
           } else if (['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp', 'ico'].includes(ext)) {
-            return 'assets/images/[name].[hash][extname]'  // 圖片檔案放在 assets/images/
+            return 'images/[name][extname]'  // 圖片檔案放在 images/（匹配 publicDir 的實際位置，不使用 hash）
           }
-          return 'assets/[name].[hash][extname]'  // 其他檔案放在 assets/
+          return 'assets/[name][extname]'  // 其他檔案放在 assets/（不使用 hash）
         },
         
-        // JavaScript 檔案命名規則
-        chunkFileNames: 'assets/js/[name].[hash].js',    // 分割的 JS 檔案
-        entryFileNames: 'assets/js/[name].[hash].js'     // 入口 JS 檔案
+        // JavaScript 檔案命名規則（不使用 hash）
+        chunkFileNames: 'assets/js/[name].js',    // 分割的 JS 檔案
+        entryFileNames: 'assets/js/[name].js'     // 入口 JS 檔案
       }
     }
   },

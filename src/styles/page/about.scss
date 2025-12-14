@@ -664,3 +664,15 @@ body {
 .fade-in {
     animation: fadeIn 0.6s ease-in-out;
 }
+
+.test {
+    background-color: $joyin-red;
+    color: $white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
